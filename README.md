@@ -16,21 +16,33 @@ Install Raspberry Pi OS using [Raspberry Pi Imager](https://www.raspberrypi.com/
 sudo apt update && sudo apt upgrade -y
 ```  
 2. [Install Node-RED](https://nodered.org/docs/getting-started/raspberrypi)  
-```bash <(curl -sL https://github.com/node-red/linux-installers/releases/latest/download/update-nodejs-and-nodered-deb)```  
+```bash
+bash <(curl -sL https://github.com/node-red/linux-installers/releases/latest/download/update-nodejs-and-nodered-deb)
+```  
 3. Enable Node-RED Service to run on boot  
-```sudo systemctl enable nodered.service```  
+```bash
+sudo systemctl enable nodered.service
+```  
 4. Start Node-RED  
-```node-red-start```  
+```bash
+node-red-start
+```  
 
 ### Node-RED Code and Access
 1. Find the IP address or Hostname
-```hostname && hostname -I```  
+```bash
+hostname && hostname -I
+```  
 2. Enter IP address or hostname at port 1880 (default Node-RED port) into a web browser  
-```http://<your ip or hostname>:1880```  
+```bash
+http://<your ip or hostname>:1880
+```  
 3. Login to Node-RED website  
 4. Install [npm](https://www.npmjs.com/) packages from the manage pallet. Install the following:  
 [node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard) and [node-red-contrib-sensor-ds18b20](https://flows.nodered.org/node/node-red-contrib-sensor-ds18b20)  
 5. Import the [Flows.json](./Flows.json) file ([Node_RED importing guide](https://nodered.org/docs/user-guide/editor/workspace/import-export))  
 6. Deploy the new flows  
 7. Enter the following in to a web browser to access the user interface  
-`http://<your ip or hostname>/ui`
+```bash
+http://<your ip or hostname>/ui
+```  
