@@ -2,7 +2,7 @@
 
 Controls a Dr Infared Heater ([DR-996](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt)) over a local Wi-Fi network.
 
-This project uses a [Raspberry Pi Zero 2W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) to host  
+This project uses a [Raspberry Pi Zero 2W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) to host
 [Node-RED](https://nodered.org/) to build the logic of the thermostat.  
 Along with this a relay is used to control the heater to turn it on or off depening on room temperture.
 
@@ -12,7 +12,9 @@ Bill of Materials (BOM) located in ReadMeAssets.
 ### Raspberry Pi
 Install Raspberry Pi OS using [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on to Mirco SD card.
 1. Update and Upgrade OS
-```sudo apt update && sudo apt upgrade -y```  
+```bash
+sudo apt update && sudo apt upgrade -y
+```  
 2. [Install Node-RED](https://nodered.org/docs/getting-started/raspberrypi)  
 ```bash <(curl -sL https://github.com/node-red/linux-installers/releases/latest/download/update-nodejs-and-nodered-deb)```  
 3. Enable Node-RED Service to run on boot  
