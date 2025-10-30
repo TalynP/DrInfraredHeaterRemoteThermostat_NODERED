@@ -28,6 +28,17 @@ sudo systemctl enable nodered.service
 node-red-start
 ```  
 
+### Node-RED RPi.GPIO Install
+Depending on your raspberry pi OS version you may need to install/update the [RPi.GPIO](https://pypi.org/project/RPi.GPIO/) library. Command to install:
+```bash
+sudo apt install python3-rpi.gpio
+```
+
+Reboot your system to refresh everything once installed:
+```bash
+sudo reboot
+```
+
 ### Node-RED Code and Access
 1. Find the IP address or Hostname
 ```bash
@@ -35,14 +46,14 @@ hostname && hostname -I
 ```  
 2. Enter IP address or hostname at port 1880 (default Node-RED port) into a web browser  
 ```bash
-http://<your ip or hostname>:1880
+http://<your IP or hostname>:1880
 ```  
-3. Login to Node-RED website  
+3. Login to the Node-RED website  
 4. Install [npm](https://www.npmjs.com/) packages from the manage pallet. Install the following:  
 [node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard) and [node-red-contrib-sensor-ds18b20](https://flows.nodered.org/node/node-red-contrib-sensor-ds18b20)  
 5. Import the [Flows.json](./Flows.json) file ([Node_RED importing guide](https://nodered.org/docs/user-guide/editor/workspace/import-export))  
 6. Deploy the new flows  
-7. Enter the following in to a web browser to access the user interface  
+7. Enter the following in to a web browser to access the user interface
 ```bash
-http://<your ip or hostname>/ui
-```  
+http://<your IP or hostname>/ui
+```
