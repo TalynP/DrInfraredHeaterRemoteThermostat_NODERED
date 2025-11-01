@@ -5,7 +5,7 @@ Controls a Dr Infared Heater ([DR-996](https://drheaterusa.com/products/dr966-24
 This project uses a [Raspberry Pi Zero 2W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) with Raspbian GNU/Linux 12 (bookworm) with [Node-RED](https://nodered.org/) to build the logic of the thermostat.  
 Along with this a relay is used to control the heater to turn it on or off depening on the room temperture.
 
-Bill of Materials](./ReadMe Assets/Dr-Infrared-Heater-Remote-Thermostat BOM.xlsx) located in ReadMeAssets.
+[Bill of Materials](./ReadMe Assets/Dr-InfraredHeater-Remote-Thermostat BOM.xlsx) located in ReadMeAssets.
 
 # Setup
 ### Raspberry Pi
