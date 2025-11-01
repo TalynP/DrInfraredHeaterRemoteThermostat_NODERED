@@ -64,10 +64,11 @@ For more information on how the Node-RED flows work reference
 # Hardware
 ## Mounting Components
 ### Mounting to the Heater
-The Raspberry Pi Zero 2W, 5v power supply and relays are mounted to the back of the Dr Infared Heater by two short sheet metal self taping screws. This mount was 3D printed with PETG (Polyethylene Terephthalate Glycol) the [HeaterBackMountPlate.stl](./ReadMeAssets/HeaterBackMountPlate.stl") file is located in the ReadMeAssets folder.
+The Raspberry Pi Zero 2W, 5v power supply and relays are mounted to the back of the Dr Infared Heater by two short sheet metal self taping screws. This mount was 3D printed with PETG (Polyethylene Terephthalate Glycol) the [HeaterBackMountPlate.stl](./ReadMeAssets/HeaterBackMountPlate.stl) file is located in the ReadMeAssets folder.
 
 ### Mounting the Temperature Probe
 The DS18B20 temperature probe should be at ran as far as possible from the heater and about 60 inches (152cm) from the floor. The reason to put the probe as far as possible from the heater is to allow time for the heat to reach the temeperture probe and evenly heat the room. The mount for the temperture probe screwed to the wall was 3D printed with PETG the [TemperatureProbeCase.stl](./ReadMeAssets/TemperatureProbeCase.stl) file is located in the ReadMeAssets folder.
 
 ## Wiring
+To wire the heater you should reference the [DR-966 Manual](./ReadMeAssets\DR-966Manual.pdf) in the ReadMeAssets folder or find it on the Dr Infared Heater [website](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt) for the DR-966. I have included a [wiring diagram](/ReadMeAssets/WiringDiagram.pdf) for how to wire the heater starting from the heavy gauge wires running from your circuit breaker panel to the heater. The wiring diagram also notes the wire gauges that I used.
 
