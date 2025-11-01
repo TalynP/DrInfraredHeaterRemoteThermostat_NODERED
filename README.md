@@ -5,10 +5,10 @@ Controls a Dr Infared Heater ([DR-996](https://drheaterusa.com/products/dr966-24
 This project uses a [Raspberry Pi Zero 2W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) with Raspbian GNU/Linux 12 (bookworm) with [Node-RED](https://nodered.org/) to build the logic of the thermostat.  
 Along with this a relay is used to control the heater to turn it on or off depening on the room temperture.
 
-[Bill of Materials](./ReadMe Assets/Dr-InfraredHeater-Remote-Thermostat BOM.xlsx) located in ReadMeAssets.
+[Bill of Materials](./ReadMeAssets/DrInfraredHeaterRemoteThermostat_BOM.xlsx) located in ReadMeAssets folder.
 
-# Setup
-### Raspberry Pi
+# Software Setup
+## Raspberry Pi
 Install Raspberry Pi OS using [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on to Mirco SD card.
 1. Update and Upgrade OS
 ```bash
@@ -27,7 +27,8 @@ sudo systemctl enable nodered.service
 node-red-start
 ```  
 
-### Node-RED RPi.GPIO Install
+## Node-RED
+### RPi.GPIO Library Install
 Depending on your raspberry pi OS version you may need to install/update the [RPi.GPIO](https://pypi.org/project/RPi.GPIO/) library. Command to install:
 ```bash
 sudo apt install python3-rpi.gpio
@@ -38,7 +39,7 @@ Reboot your system to refresh everything once installed:
 sudo reboot
 ```
 
-### Node-RED Code and Access
+### Access and Flows
 1. Find the IP address or Hostname
 ```bash
 hostname && hostname -I
@@ -56,3 +57,17 @@ http://<your IP or hostname>:1880
 ```bash
 http://<your IP or hostname>/ui
 ```
+
+### Details
+For more information on how the Node-RED flows work reference 
+
+# Hardware
+## Mounting Components
+### Mounting to the Heater
+The Raspberry Pi Zero 2W, 5v power supply and relays are mounted to the back of the Dr Infared Heater by two short sheet metal self taping screws. This mount was 3D printed with PETG (Polyethylene Terephthalate Glycol) the [HeaterBackMountPlate.stl](./ReadMeAssets/HeaterBackMountPlate.stl") file is located in the ReadMeAssets folder.
+
+### Mounting the Temperature Probe
+The DS18B20 temperature probe should be at ran as far as possible from the heater and about 60 inches (152cm) from the floor. The reason to put the probe as far as possible from the heater is to allow time for the heat to reach the temeperture probe and evenly heat the room. The mount for the temperture probe screwed to the wall was 3D printed with PETG the [TemperatureProbeCase.stl](./ReadMeAssets/TemperatureProbeCase.stl) file is located in the ReadMeAssets folder.
+
+## Wiring
+
