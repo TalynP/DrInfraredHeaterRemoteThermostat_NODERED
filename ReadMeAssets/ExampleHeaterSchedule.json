@@ -1,0 +1,26 @@
+{
+  "Sunday": [
+    {
+      "startTime": "08:00 AM",
+      "stopTime": "10:00 AM",
+      "temp": 70
+    }
+  ],
+  "Monday": [
+    {
+      "startTime": "09:00 AM",
+      "stopTime": "11:00 AM",
+      "temp": 65
+    },
+    {
+      "startTime": "02:00 PM",
+      "stopTime": "03:00 PM",
+      "temp": 77
+    }
+  ],
+  "Tuesday": [],
+  "Wednesday": [],
+  "Thursday": [],
+  "Friday": [],
+  "Saturday": []
+}

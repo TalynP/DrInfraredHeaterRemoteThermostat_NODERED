@@ -1,4 +1,4 @@
-# Dr-Infrared-Heater-Remote-Thermostat
+# Dr Infrared Heater Remote Thermostat
 
 Controls a Dr Infared Heater ([DR-996](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt)) over a local Wi-Fi network.
 
@@ -58,8 +58,17 @@ http://<your IP or hostname>:1880
 http://<your IP or hostname>/ui
 ```
 
+### Flow Files
+The Node-RED flows maintain two files the HeaterSchedule.json and HeaterState.log. The HeaterSchedule.json holds the time periods for the heater to maintain a temperature. Then the HeaterState.log writes when the heater turns on and off and logs the source that caused the heater to turn on or off.  
+  
+An [Example HeaterSchedule.json](./ReadMeAssets/ExampleHeaterSchedule.json) is located in the ReadMeAssets and is described below:  
+Sunday - The system will hold 70°F from 8am to 10am  
+Monday - The system will hold 65°F from 9am to 11am and will hold 77°F from 2pm to 3pm  
+Tuesday, Wednesday, Thursday, Friday, Saturday - No time periods
+
+
 ### Details
-For more information on how the Node-RED flows work reference 
+For more information on how the Node-RED flows work reference _____
 
 # Hardware
 ## Mounting Components
