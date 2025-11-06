@@ -160,7 +160,7 @@ The DS18B20 temperature probe should be at ran as far as possible from the heate
 ## Wiring
 To wire the heater you should reference the [DR-966 Manual](./ReadMeAssets\DR-966Manual.pdf) in the ReadMeAssets folder or find it on the Dr Infrared Heater [website](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt) for the DR-966. I have included a [wiring diagram](/ReadMeAssets/WiringDiagram.pdf) for how to wire the heater starting from the heavy gauge wires running from your circuit breaker panel to the heater. The wiring diagram also notes the wire gauges that I used.  
 
-># Safety Disclaimer and Hazards
+# Safety Disclaimer and Hazards
 This project is great for learning about the Linux command line interface (CLI), Node-RED, and the Internet of Things (IoT). Working with AC mains electricity, heating elements, and temperature controlled systems can be dangerous and may cause electrocution, burns, fire, property damage or violations of local electrical code if done incorrectly. __Always use safe practices for this project.__ The author assumes no responsibility, liability or fault for any damage, injury or other harm from the use of this project.
 
 ### Hazards  
@@ -174,7 +174,7 @@ This project is great for learning about the Linux command line interface (CLI),
 - __Test Test Test__: Never leave the system unattended when testing and monitor it closely.
 - Follow local codes: Ensure your project complies with local electrical standards and regulations.
 
-># Authors Note and Future Features
+# Authors Note and Future Features
 Finally, don't be dumb if you do not understand the dangers listed above don't do this project. I have done my best to test this system to make sure that the worst case scenario doesn't happen but cannot 100% guarantee the safety of this system.
 
 ### Future Features
