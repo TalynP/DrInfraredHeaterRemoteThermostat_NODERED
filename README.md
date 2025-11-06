@@ -1,36 +1,38 @@
 # Dr Infrared Heater Remote Thermostat
 
-Controls a Dr Infared Heater ([DR-996](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt)) over a local Wi-Fi network.
+Controls a Dr Infrared Heater ([DR-996](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt)) over a local Wi-Fi network.
 
 This project uses a [Raspberry Pi Zero 2W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) with Raspbian GNU/Linux 12 (bookworm) with [Node-RED](https://nodered.org/) to build the logic of the thermostat.  
-Along with this a relay is used to control the heater to turn it on or off depening on the room temperture.  
+Along with this a relay is used to control the heater to turn it on or off depending on the room temperature.  
   
 ## User Pages  
 ![Common User Pages](./ReadMeAssets/CommonUserPages.png)
 
 # Software Setup
 ## Raspberry Pi
-Install Raspberry Pi OS using [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on to Mirco SD card.
-1. Update and Upgrade OS
+Install the Raspberry Pi OS on to a micro SD card using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) software.
+1. SSH into your Raspberry Pi
+2. Update and Upgrade OS
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```  
-2. [Install Node-RED](https://nodered.org/docs/getting-started/raspberrypi)  
+3. Install [Node-RED](https://nodered.org/docs/getting-started/raspberrypi)  
 ```bash
 bash <(curl -sL https://github.com/node-red/linux-installers/releases/latest/download/update-nodejs-and-nodered-deb)
 ```  
-3. Enable Node-RED Service to run on boot  
+4. When it asks "Would you like to install the Pi-specific nodes?" select yes
+5. Enable Node-RED Service to run on boot  
 ```bash
 sudo systemctl enable nodered.service
 ```  
-4. Start Node-RED  
+6. Start Node-RED  
 ```bash
 node-red-start
 ```  
 
 ## Node-RED
 ### RPi.GPIO Library Install
-Depending on your raspberry pi OS version you may need to install/update the [RPi.GPIO](https://pypi.org/project/RPi.GPIO/) library. Command to install:
+Depending on your Raspberry Pi OS version you may need to install/update the [RPi.GPIO](https://pypi.org/project/RPi.GPIO/) library. Command to install:
 ```bash
 sudo apt install python3-rpi.gpio
 ```
@@ -41,7 +43,7 @@ sudo reboot
 ```
 
 ### Access and Flows
-1. Find the IP address or Hostname
+1. Find the IP address or hostname
 ```bash
 hostname && hostname -I
 ```  
@@ -73,7 +75,7 @@ For more information on how the Node-RED flows work reference _____
 
 ## nginx and Remote Access
 ### nginx Reverse Proxy (Optional)
-[nginx](https://nginx.org/) is used as a simple reverse proxy to allow a hostname such as `http://<your IP or hostname>.local` to show the Node-RED user interface (ui) dashboard website which defaults to `http://<your IP or hostname>.local:1880/ui/` and makes the overall user exprience simpler. Below are the steps of how to setup nginx.  
+[nginx](https://nginx.org/) is used as a simple reverse proxy to allow a hostname such as `http://<your IP or hostname>.local` to show the Node-RED user interface (ui) dashboard website which defaults to `http://<your IP or hostname>.local:1880/ui/` and makes the user experience seamless. Below are the steps of how to setup nginx.  
 1. Install nginx
 ```bash
 sudo apt update
@@ -125,7 +127,7 @@ sudo systemctl reload nginx
 Note - nginx steps assisted in creation with OpenAI ChatGPT.
 
 ### Remote Access to the Raspberry Pi (Optional)
-A native feature for Raspberry Pi's is their [Raspberry Pi Connect](https://www.raspberrypi.com/software/connect/) software that allows secure remote access to your Raspberry Pi. Below I have quick instructions to get this working using a headless (no desktop) Raspberry Pi but is best to reference the official Raspberry Pi Connect [documentation](https://www.raspberrypi.com/documentation/services/connect.html).  
+A native feature for Raspberry Pi's is their [Raspberry Pi Connect](https://www.raspberrypi.com/software/connect/) software that allows secure remote access to your Raspberry Pi. Below I have steps to get this working using a headless (no desktop) Raspberry Pi but is best to reference the official Raspberry Pi Connect [documentation](https://www.raspberrypi.com/documentation/services/connect.html).  
 
 1. Install Raspberry Pi Connect
 ```bash
@@ -143,20 +145,38 @@ loginctl enable-linger
 ```bash
 rpi-connect signin
 ```
-5. Use the Raspberry Pi Connect website to remotely connect to your Pi.  
+5. Use the Raspberry Pi Connect website to remotely connect to your Pi  
 # Hardware
 ## Bill of Materials (BOM)
 A [bill of materials](./ReadMeAssets/DrInfraredHeaterRemoteThermostat_BOM.xlsx) has been provided and is located in ReadMeAssets folder.
 
 ## Mounting Components
 ### Mounting to the Heater
-The Raspberry Pi Zero 2W, 5v power supply and relays are mounted to the [HeaterBackMountPlate](./ReadMeAssets/HeaterBackMountPlate.stl) then that is attached to the back of the Dr Infared Heater by two short sheet metal self taping screws. This mount was 3D printed with PETG (Polyethylene Terephthalate Glycol) the [HeaterBackMountPlate.stl](./ReadMeAssets/HeaterBackMountPlate.stl) file is located in the ReadMeAssets folder.
+The Raspberry Pi Zero 2W, 5v power supply and relays are mounted to the [HeaterBackMountPlate](./ReadMeAssets/HeaterBackMountPlate.stl) then that is attached to the back of the Dr Infrared Heater by two short sheet metal self taping screws. This mount was 3D printed with PETG (Polyethylene Terephthalate Glycol) the [HeaterBackMountPlate.stl](./ReadMeAssets/HeaterBackMountPlate.stl) file is located in the ReadMeAssets folder.
 
 ### Mounting the Temperature Probe
-The DS18B20 temperature probe should be at ran as far as possible from the heater and about 60 inches (152cm) from the floor. The reason to put the probe as far as possible from the heater is to allow time for the heat to reach the temeperture probe and evenly heat the room. The mount for the temperture probe screwed to the wall was 3D printed with PETG the [TemperatureProbeCase.stl](./ReadMeAssets/TemperatureProbeCase.stl) file is located in the ReadMeAssets folder.
+The DS18B20 temperature probe should be at ran as far as possible from the heater and about 60 inches (152cm) from the floor. The reason to put the probe as far as possible from the heater is to allow time for the heat in the room to reach the temperature probe and evenly warm the room. The mount for the temperature probe is screwed to the wall and was 3D printed with PETG the [TemperatureProbeCase.stl](./ReadMeAssets/TemperatureProbeCase.stl) file is located in the ReadMeAssets folder.
 
 ## Wiring
-To wire the heater you should reference the [DR-966 Manual](./ReadMeAssets\DR-966Manual.pdf) in the ReadMeAssets folder or find it on the Dr Infared Heater [website](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt) for the DR-966. I have included a [wiring diagram](/ReadMeAssets/WiringDiagram.pdf) for how to wire the heater starting from the heavy gauge wires running from your circuit breaker panel to the heater. The wiring diagram also notes the wire gauges that I used.
+To wire the heater you should reference the [DR-966 Manual](./ReadMeAssets\DR-966Manual.pdf) in the ReadMeAssets folder or find it on the Dr Infrared Heater [website](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt) for the DR-966. I have included a [wiring diagram](/ReadMeAssets/WiringDiagram.pdf) for how to wire the heater starting from the heavy gauge wires running from your circuit breaker panel to the heater. The wiring diagram also notes the wire gauges that I used.  
 
-## Safety
-Needs info _____
+># Safety Disclaimer and Hazards
+This project is great for learning about the Linux command line interface (CLI), Node-RED, and the Internet of Things (IoT). Working with AC mains electricity, heating elements, and temperature controlled systems can be dangerous and may cause electrocution, burns, fire, property damage or violations of local electrical code if done incorrectly. __Always use safe practices for this project.__ The author assumes no responsibility, liability or fault for any damage, injury or other harm from the use of this project.
+
+### Hazards  
+- Electrical Hazards: electrocution, electrical shock, burns and fire  
+- Heating Element Hazards: hot surfaces, burns and fire
+
+### Preventing Hazards
+- Check Component Ratings: Ensure components can handle the appropriate voltages and currents.
+- Wire Inspection: Ensure wiring is properly insulated and no terminals are loose or exposed.
+- __Hardware Shutoff__: Ensure you can easily and safely shutoff all power to the system, for example using a circuit breaker.
+- __Test Test Test__: Never leave the system unattended when testing and monitor it closely.
+- Follow local codes: Ensure your project complies with local electrical standards and regulations.
+
+># Authors Note and Future Features
+Finally, don't be dumb if you do not understand the dangers listed above don't do this project. I have done my best to test this system to make sure that the worst case scenario doesn't happen but cannot 100% guarantee the safety of this system.
+
+### Future Features
+- Moving from node-red-dashboard to flowfuse/node-red-dashboard.
+- Redesign to use solid state relays (SSRs) instead of mechanical relays.
