@@ -6,7 +6,7 @@ This project uses a [Raspberry Pi Zero 2W](https://www.raspberrypi.com/products/
 Along with this a relay is used to control the heater to turn it on or off depending on the room temperature.  
   
 ## User Pages  
-![Common User Pages](./ReadMeAssets/CommonUserPages.png)
+![Common User Pages](./ReadMeAssets/UserPages.png)
 
 # Software Setup
 ## Raspberry Pi
