@@ -179,4 +179,5 @@ Finally, don't be dumb if you do not understand the dangers listed above don't d
 
 ### Future Features
 - Moving from node-red-dashboard to flowfuse/node-red-dashboard.
+- Celsius option for all temperature values
 - Redesign to use solid state relays (SSRs) instead of mechanical relays.
