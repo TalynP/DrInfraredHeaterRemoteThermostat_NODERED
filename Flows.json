@@ -1,0 +1,3277 @@
+[
+    {
+        "id": "4b705cf7bd70f406",
+        "type": "tab",
+        "label": "Main",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4c416469df6f7565",
+        "type": "tab",
+        "label": "Heater Logic",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2ae2a200c9aa104b",
+        "type": "tab",
+        "label": "Min Room Temp",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5d3c315c16cfadb9",
+        "type": "tab",
+        "label": "Debug",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7aab6a5b7da11035",
+        "type": "junction",
+        "z": "4b705cf7bd70f406",
+        "x": 1000,
+        "y": 560,
+        "wires": [
+            [
+                "5e676e1c35b14b88",
+                "358fafcd7e6a9aff",
+                "33e28b53ed27af58"
+            ]
+        ]
+    },
+    {
+        "id": "2c861589b8d0b6cc",
+        "type": "junction",
+        "z": "4b705cf7bd70f406",
+        "x": 1000,
+        "y": 640,
+        "wires": [
+            [
+                "5e676e1c35b14b88",
+                "358fafcd7e6a9aff",
+                "33e28b53ed27af58"
+            ]
+        ]
+    },
+    {
+        "id": "f6fc6624340f01d2",
+        "type": "junction",
+        "z": "4b705cf7bd70f406",
+        "x": 640,
+        "y": 640,
+        "wires": [
+            [
+                "2c861589b8d0b6cc",
+                "ef254e512e69c9a2"
+            ]
+        ]
+    },
+    {
+        "id": "6ad863b5147d0d59",
+        "type": "junction",
+        "z": "4b705cf7bd70f406",
+        "x": 640,
+        "y": 560,
+        "wires": [
+            [
+                "7aab6a5b7da11035"
+            ]
+        ]
+    },
+    {
+        "id": "723f8d705648f008",
+        "type": "junction",
+        "z": "4c416469df6f7565",
+        "x": 1540,
+        "y": 180,
+        "wires": [
+            [
+                "03513d3490b6490f",
+                "dc0865137b30320b"
+            ]
+        ]
+    },
+    {
+        "id": "1b9eceb0c81cb0aa",
+        "type": "junction",
+        "z": "4b705cf7bd70f406",
+        "x": 940,
+        "y": 360,
+        "wires": [
+            [
+                "b40e8ff8abc4b6e3"
+            ]
+        ]
+    },
+    {
+        "id": "4a6f3982ab987f6b",
+        "type": "junction",
+        "z": "4b705cf7bd70f406",
+        "x": 940,
+        "y": 440,
+        "wires": [
+            [
+                "b40e8ff8abc4b6e3"
+            ]
+        ]
+    },
+    {
+        "id": "ccc5b24c24bab434",
+        "type": "junction",
+        "z": "4b705cf7bd70f406",
+        "x": 580,
+        "y": 440,
+        "wires": [
+            [
+                "4a6f3982ab987f6b"
+            ]
+        ]
+    },
+    {
+        "id": "d77e0350b4860708",
+        "type": "junction",
+        "z": "4b705cf7bd70f406",
+        "x": 580,
+        "y": 360,
+        "wires": [
+            [
+                "9b9e6bd7a71d266a"
+            ]
+        ]
+    },
+    {
+        "id": "39c3d28c8a63ae3e",
+        "type": "junction",
+        "z": "4c416469df6f7565",
+        "x": 1320,
+        "y": 100,
+        "wires": [
+            [
+                "6a0beaedb0e5156b"
+            ]
+        ]
+    },
+    {
+        "id": "9b9e6bd7a71d266a",
+        "type": "junction",
+        "z": "4b705cf7bd70f406",
+        "x": 640,
+        "y": 360,
+        "wires": [
+            [
+                "1b9eceb0c81cb0aa",
+                "981fa26cd3a5ec5a"
+            ]
+        ]
+    },
+    {
+        "id": "c3984c1cff55d6ca",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "fa-home",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b7303adebbd9896e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#2a3b8d",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Main Theme",
+                "default": "#4B7930",
+                "baseColor": "#000000",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#000000",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#3e7bcc",
+                    "edited": true
+                },
+                "page-backgroundColor": {
+                    "value": "#f5f5f5",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#a4bcda",
+                    "edited": true
+                },
+                "group-textColor": {
+                    "value": "#000000",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#000000",
+                    "edited": true
+                },
+                "widget-backgroundColor": {
+                    "value": "#42abb3",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Heater",
+            "hideToolbar": "false",
+            "allowSwipe": "menu",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "MM/DD/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "10ebac4a7e923c3d",
+        "type": "ui_group",
+        "name": "Room Temperature",
+        "tab": "c3984c1cff55d6ca",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "74a1a7bbe0e540dc",
+        "type": "ui_tab",
+        "name": "Weekly Schedule",
+        "icon": "fa-calendar",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b3fc61f089948690",
+        "type": "ui_group",
+        "name": "Weekly Heater Schedule",
+        "tab": "74a1a7bbe0e540dc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5826cba8921c7e91",
+        "type": "ui_tab",
+        "name": "Min Room Temp",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "37244093dc9c3233",
+        "type": "ui_group",
+        "name": "Room Temp",
+        "tab": "5826cba8921c7e91",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "51920a8775fa189a",
+        "type": "ui_switch",
+        "z": "4b705cf7bd70f406",
+        "name": "Manual Override Control",
+        "label": "Manual Override Control",
+        "tooltip": "",
+        "group": "10ebac4a7e923c3d",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 190,
+        "y": 600,
+        "wires": [
+            [
+                "cbebf2c25d456454"
+            ]
+        ]
+    },
+    {
+        "id": "5e676e1c35b14b88",
+        "type": "rpi-gpio out",
+        "z": "4b705cf7bd70f406",
+        "name": "Heater Relay Switch",
+        "pin": "18",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 1200,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "ef27d14dec7fb45f",
+        "type": "rpi-gpio out",
+        "z": "4b705cf7bd70f406",
+        "name": "Heater Relay Switch Default State",
+        "pin": "18",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 1620,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f5e52959f1e48d00",
+        "type": "comment",
+        "z": "4b705cf7bd70f406",
+        "name": "Manual Override Control",
+        "info": "",
+        "x": 130,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "51efc27076d713f0",
+        "type": "ui_gauge",
+        "z": "4b705cf7bd70f406",
+        "name": "Current Room Temp",
+        "group": "10ebac4a7e923c3d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "F",
+        "format": "{{value}} °F",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#2b00ff",
+            "#65ab36",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "85",
+        "diff": false,
+        "className": "",
+        "x": 540,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "aeae4853dcc94daa",
+        "type": "sensor-ds18b20",
+        "z": "4b705cf7bd70f406",
+        "name": "Temp Probe",
+        "topic": "",
+        "sensorid": "28-3ce1e380cb0b",
+        "timer": "1",
+        "repeat": true,
+        "x": 90,
+        "y": 760,
+        "wires": [
+            [
+                "620007fc07447aec",
+                "dfec7e20f691b573"
+            ]
+        ]
+    },
+    {
+        "id": "620007fc07447aec",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Celcius to Fahrenheit",
+        "func": "let celcius = msg.payload;\nlet fahrenheit;\nif (celcius != 0 && celcius != undefined){\n    fahrenheit = Math.round(((celcius * 9 / 5) + 32) * 10) / 10;\n}\nelse{\n    fahrenheit = null;\n}\n\nglobal.set(\"roomTemp\", fahrenheit);\nmsg.payload = fahrenheit;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 760,
+        "wires": [
+            [
+                "51efc27076d713f0",
+                "86cf45aff438fd8d"
+            ]
+        ]
+    },
+    {
+        "id": "45cd4a97b714bb9f",
+        "type": "file in",
+        "z": "4b705cf7bd70f406",
+        "name": "Read In Heater Schedule",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "utf8",
+        "allProps": false,
+        "x": 410,
+        "y": 1260,
+        "wires": [
+            [
+                "9a3370eeb3d6680a"
+            ]
+        ]
+    },
+    {
+        "id": "9a3370eeb3d6680a",
+        "type": "json",
+        "z": "4b705cf7bd70f406",
+        "name": "Parse Heater Schedule",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 670,
+        "y": 1260,
+        "wires": [
+            [
+                "07d9464cf0c4cc40"
+            ]
+        ]
+    },
+    {
+        "id": "07d9464cf0c4cc40",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Add New Time",
+        "func": "let schedule = msg.payload;\nif (schedule == null){\n    schedule = {\n      Sunday:   [],\n      Monday:   [],\n      Tuesday:  [],\n      Wednesday:[],\n      Thursday: [],\n      Friday:   [],\n      Saturday: []\n    };\n}\n\n// Bring in New Time\nconst newTime = msg.newTime;\n\n//Check for all elements\nif (!(newTime.day && newTime.startTime && newTime.endTime && newTime.temp != null)){\n    msg.payload = \"Error Missing All Scheduling Components\"\n}\n\nschedule[newTime.day].push({\n    startTime: newTime.startTime,\n    stopTime: newTime.endTime,\n    temp: newTime.temp\n});\n\n\nglobal.set(\"heaterSchedule\", schedule);\nmsg.payload = schedule;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 1260,
+        "wires": [
+            [
+                "220b8c21409882b5"
+            ]
+        ]
+    },
+    {
+        "id": "c8c1e334ec3da629",
+        "type": "file",
+        "z": "4b705cf7bd70f406",
+        "name": "Update Heater Schedule",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "utf8",
+        "x": 1070,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f729f87fc431fbb",
+        "type": "json",
+        "z": "4b705cf7bd70f406",
+        "name": "Parse Heater Schedule",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 590,
+        "y": 1320,
+        "wires": [
+            [
+                "2aeb5c1e3d5b4b38"
+            ]
+        ]
+    },
+    {
+        "id": "73602107c3d630cb",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Set Global Context",
+        "func": "global.set(\"heaterSchedule\", msg.payload);\nglobal.set(\"currentHeaterPinState\", undefined);\nglobal.set(\"manualControlState\", 0);\nglobal.set(\"oneHourSwitchState\", 0);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 100,
+        "wires": [
+            [
+                "064d4de6853cfb7e"
+            ]
+        ]
+    },
+    {
+        "id": "973d4bc7852cd8e4",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Change msg Name",
+        "func": "msg.newTime = msg.payload;\nmsg.filename = env.get(\"HOME\") + \"/HeaterSchedule.json\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 1260,
+        "wires": [
+            [
+                "45cd4a97b714bb9f"
+            ]
+        ]
+    },
+    {
+        "id": "ad4b13f90c3a15d9",
+        "type": "comment",
+        "z": "4b705cf7bd70f406",
+        "name": "Display and Update Room Temp",
+        "info": "",
+        "x": 150,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "4ce6c6791a6b2ece",
+        "type": "comment",
+        "z": "4b705cf7bd70f406",
+        "name": "Update and Display Schedule and Changes",
+        "info": "",
+        "x": 190,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "bcc0fd506e64db7b",
+        "type": "file in",
+        "z": "4b705cf7bd70f406",
+        "name": "Read In Heater Schedule First",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "utf8",
+        "allProps": false,
+        "x": 590,
+        "y": 100,
+        "wires": [
+            [
+                "730d4df061b7376d"
+            ]
+        ]
+    },
+    {
+        "id": "730d4df061b7376d",
+        "type": "json",
+        "z": "4b705cf7bd70f406",
+        "name": "Parse Heater Schedule",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 870,
+        "y": 100,
+        "wires": [
+            [
+                "73602107c3d630cb",
+                "55ea3e2345003720"
+            ]
+        ]
+    },
+    {
+        "id": "064d4de6853cfb7e",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Change msg Contents",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 100,
+        "wires": [
+            [
+                "ef27d14dec7fb45f",
+                "09987f2de726d9a9"
+            ]
+        ]
+    },
+    {
+        "id": "ef43e719f6c97f1b",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Set Flow Context",
+        "func": "global.set(\"heaterSchedule\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1320,
+        "wires": [
+            [
+                "3f729f87fc431fbb"
+            ]
+        ]
+    },
+    {
+        "id": "b7b35f93c21f95fc",
+        "type": "inject",
+        "z": "4b705cf7bd70f406",
+        "name": "Initialize State",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "b5bd0be6dd35a91c",
+                "1289e41fa79c4762"
+            ]
+        ]
+    },
+    {
+        "id": "55ea3e2345003720",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Signature",
+        "func": "msg.signature = \"init\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 140,
+        "wires": [
+            [
+                "e87b1f11e0400883"
+            ]
+        ]
+    },
+    {
+        "id": "775a4d88cdf5ed75",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "From Who",
+        "func": "if (msg.signature !== \"init\") {\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 1320,
+        "wires": [
+            [
+                "ef43e719f6c97f1b"
+            ]
+        ]
+    },
+    {
+        "id": "9e9b5b513275249c",
+        "type": "comment",
+        "z": "4b705cf7bd70f406",
+        "name": "Setting Default State",
+        "info": "",
+        "x": 110,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b56e2c4f9974037f",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Enable",
+        "func": "global.set(\"manualControlState\", 1);\nglobal.set(\"currentHeaterPinState\", true);\nmsg.payload = 1;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 620,
+        "wires": [
+            [
+                "748f59868b5ee5d2",
+                "f6fc6624340f01d2"
+            ]
+        ]
+    },
+    {
+        "id": "c87ef93df5470350",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Disable",
+        "func": "global.set(\"manualControlState\", 0);\nglobal.set(\"currentHeaterPinState\", false);\nmsg.payload = 0;\nmsg.reset = \"\"; //Stop 2 Hour Timeout\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 580,
+        "wires": [
+            [
+                "748f59868b5ee5d2",
+                "6ad863b5147d0d59"
+            ]
+        ]
+    },
+    {
+        "id": "cbebf2c25d456454",
+        "type": "switch",
+        "z": "4b705cf7bd70f406",
+        "name": "State",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 390,
+        "y": 600,
+        "wires": [
+            [
+                "c87ef93df5470350"
+            ],
+            [
+                "b56e2c4f9974037f"
+            ]
+        ]
+    },
+    {
+        "id": "748f59868b5ee5d2",
+        "type": "delay",
+        "z": "4b705cf7bd70f406",
+        "name": "2 Hour Timeout",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "hours",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 720,
+        "y": 600,
+        "wires": [
+            [
+                "dcb7a39f232150bf"
+            ]
+        ]
+    },
+    {
+        "id": "dcb7a39f232150bf",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Adjust Payload",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 600,
+        "wires": [
+            [
+                "5e676e1c35b14b88",
+                "b1eb6bfe15b72019",
+                "358fafcd7e6a9aff",
+                "33e28b53ed27af58"
+            ]
+        ]
+    },
+    {
+        "id": "e87b1f11e0400883",
+        "type": "link out",
+        "z": "4b705cf7bd70f406",
+        "name": "Init out",
+        "mode": "link",
+        "links": [
+            "a9ac043157f9d554",
+            "f7fc53f5605b6d4c"
+        ],
+        "x": 1185,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "a9ac043157f9d554",
+        "type": "link in",
+        "z": "4b705cf7bd70f406",
+        "name": "Init in 1",
+        "links": [
+            "e87b1f11e0400883"
+        ],
+        "x": 965,
+        "y": 1220,
+        "wires": [
+            [
+                "220b8c21409882b5"
+            ]
+        ]
+    },
+    {
+        "id": "b1eb6bfe15b72019",
+        "type": "link out",
+        "z": "4b705cf7bd70f406",
+        "name": "Heater Switch Control Out",
+        "mode": "link",
+        "links": [
+            "19a82d6303dc8848"
+        ],
+        "x": 1115,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "19a82d6303dc8848",
+        "type": "link in",
+        "z": "4b705cf7bd70f406",
+        "name": "Heater Switch Control In",
+        "links": [
+            "b1eb6bfe15b72019"
+        ],
+        "x": 35,
+        "y": 600,
+        "wires": [
+            [
+                "51920a8775fa189a"
+            ]
+        ]
+    },
+    {
+        "id": "b0e7c7be420cbc6d",
+        "type": "ui_dropdown",
+        "z": "4b705cf7bd70f406",
+        "name": "",
+        "label": "Day Selection",
+        "tooltip": "",
+        "place": "Select Day",
+        "group": "b3fc61f089948690",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Sunday",
+                "value": "Sunday",
+                "type": "str"
+            },
+            {
+                "label": "Monday",
+                "value": "Monday",
+                "type": "str"
+            },
+            {
+                "label": "Tuesday",
+                "value": "Tuesday",
+                "type": "str"
+            },
+            {
+                "label": "Wednesday",
+                "value": "Wednesday",
+                "type": "str"
+            },
+            {
+                "label": "Thursday",
+                "value": "Thursday",
+                "type": "str"
+            },
+            {
+                "label": "Friday",
+                "value": "Friday",
+                "type": "str"
+            },
+            {
+                "label": "Saturday",
+                "value": "Saturday",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 400,
+        "y": 1040,
+        "wires": [
+            [
+                "2765f19f62e0f755"
+            ]
+        ]
+    },
+    {
+        "id": "6e44548cb43dd675",
+        "type": "ui_button",
+        "z": "4b705cf7bd70f406",
+        "name": "Submit Button",
+        "group": "b3fc61f089948690",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Submit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "newSchedule",
+        "payloadType": "flow",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 880,
+        "y": 960,
+        "wires": [
+            [
+                "89c661fc7f232a5b"
+            ]
+        ]
+    },
+    {
+        "id": "f60be21e094d5326",
+        "type": "ui_text_input",
+        "z": "4b705cf7bd70f406",
+        "name": "Start Time",
+        "label": "Start Time",
+        "tooltip": "",
+        "group": "b3fc61f089948690",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "time",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 390,
+        "y": 1080,
+        "wires": [
+            [
+                "29ff6d23ffc41a2e"
+            ]
+        ]
+    },
+    {
+        "id": "86cf45aff438fd8d",
+        "type": "ui_chart",
+        "z": "4b705cf7bd70f406",
+        "name": "Room Temp Overtime",
+        "group": "10ebac4a7e923c3d",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Room Temp Overtime (°F)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "hh:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "12",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#001ba3",
+            "#aec7e8",
+            "#001ba3",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 540,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4ddcf8e9d6da89d6",
+        "type": "ui_text_input",
+        "z": "4b705cf7bd70f406",
+        "name": "End Time",
+        "label": "End Time",
+        "tooltip": "",
+        "group": "b3fc61f089948690",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "time",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 380,
+        "y": 1120,
+        "wires": [
+            [
+                "8c15bc33efac7f20"
+            ]
+        ]
+    },
+    {
+        "id": "b5bd0be6dd35a91c",
+        "type": "link out",
+        "z": "4b705cf7bd70f406",
+        "name": "Min Room Temp Out",
+        "mode": "link",
+        "links": [
+            "6022207dc0b4ebe1",
+            "b02fb1254161997f"
+        ],
+        "x": 255,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "23e3510525e49909",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Check Scheduling Inputs",
+        "func": "let daySelection = flow.get(\"daySelection\");\nlet startTime = flow.get(\"startTime\");\nlet endTime = flow.get(\"endTime\");\nlet tempSet = flow.get(\"tempSet\");\nlet rawStartTime = flow.get(\"rawStartTime\");\nlet rawEndTime = parseInt(flow.get(\"rawEndTime\"));\n\nmsg.payload = {\n    day: daySelection,\n    startTime: startTime,\n    endTime: endTime,\n    temp: tempSet\n}\n\nif (daySelection != \"\" && daySelection != null){\n    if (startTime != \"\" && startTime != null && endTime != \"\" && endTime != null){\n        if (rawEndTime > rawStartTime){\n            if (tempSet != \"\" && tempSet != null){\n                msg.ready = 1;\n            }\n            else {\n                msg.ready = 0;\n            }\n        }\n        else {\n            msg.ready = 0;\n        }\n    }\n    else {\n        msg.ready = 0;\n    }\n}\nelse {\n    msg.ready = 0;\n}\n\nflow.set(\"newSchedule\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 960,
+        "wires": [
+            [
+                "bba6817dfe64d60d"
+            ]
+        ]
+    },
+    {
+        "id": "2765f19f62e0f755",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Set Flow Context",
+        "func": "flow.set(\"daySelection\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "29ff6d23ffc41a2e",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Set Flow Context",
+        "func": "let ms = msg.payload;\nlet totalSecs = ms / 1000;\nlet hours = Math.floor(totalSecs / 3600);\nlet mins = Math.floor((totalSecs % 3600) / 60);\n\nlet ampm = hours >= 12 ? \"PM\" : \"AM\";\nlet hours12 = (hours % 12 || 12).toString().padStart(2, '0');\nlet minsStr = mins.toString().padStart(2, '0');\nlet timeString = `${hours12}:${minsStr} ${ampm}`;\n\nflow.set(\"startTime\", timeString);\nflow.set(\"rawStartTime\", ms);\nmsg.payload = timeString;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c15bc33efac7f20",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Set Flow Context",
+        "func": "let ms = msg.payload;\nlet totalSecs = ms / 1000;\nlet hours = Math.floor(totalSecs / 3600);\nlet mins = Math.floor((totalSecs % 3600) / 60);\n\nlet ampm = hours >= 12 ? \"PM\" : \"AM\";\nlet hours12 = (hours % 12 || 12).toString().padStart(2, '0');\nlet minsStr = mins.toString().padStart(2, '0');\nlet timeString = `${hours12}:${minsStr} ${ampm}`;\n\nflow.set(\"endTime\", timeString);\nflow.set(\"rawEndTime\", ms);\nmsg.payload = timeString;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88c105631ee1818c",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Set Flow Context",
+        "func": "flow.set(\"tempSet\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a21dce0966a3de8a",
+        "type": "inject",
+        "z": "4b705cf7bd70f406",
+        "name": "1 Sec Interval",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "object",
+        "payloadType": "date",
+        "x": 120,
+        "y": 960,
+        "wires": [
+            [
+                "23e3510525e49909"
+            ]
+        ]
+    },
+    {
+        "id": "bba6817dfe64d60d",
+        "type": "switch",
+        "z": "4b705cf7bd70f406",
+        "name": "State",
+        "property": "ready",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 960,
+        "wires": [
+            [
+                "6083c329f92384af"
+            ],
+            [
+                "66c9d9c0aed9ab69"
+            ]
+        ]
+    },
+    {
+        "id": "6083c329f92384af",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Disable",
+        "func": "msg.enabled = false;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 940,
+        "wires": [
+            [
+                "6e44548cb43dd675"
+            ]
+        ]
+    },
+    {
+        "id": "66c9d9c0aed9ab69",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Enable",
+        "func": "msg.enabled = true;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 980,
+        "wires": [
+            [
+                "6e44548cb43dd675"
+            ]
+        ]
+    },
+    {
+        "id": "c7705564ca4febd6",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Set Flow Context",
+        "func": "flow.set(\"daySelection\", null);\nflow.set(\"startTime\", null);\nflow.set(\"endTime\", null);\nflow.set(\"tempSet\", null);\nmsg.payload = \"\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 1100,
+        "wires": [
+            [
+                "b0e7c7be420cbc6d",
+                "f60be21e094d5326",
+                "4ddcf8e9d6da89d6",
+                "98fec9a12d9fd2dd"
+            ]
+        ]
+    },
+    {
+        "id": "89c661fc7f232a5b",
+        "type": "link out",
+        "z": "4b705cf7bd70f406",
+        "name": "Update Schedule Out",
+        "mode": "link",
+        "links": [
+            "8863a8ea39e8814d",
+            "717669c06ab57328"
+        ],
+        "x": 1015,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "8863a8ea39e8814d",
+        "type": "link in",
+        "z": "4b705cf7bd70f406",
+        "name": "Update Schedule In 1",
+        "links": [
+            "89c661fc7f232a5b"
+        ],
+        "x": 35,
+        "y": 1100,
+        "wires": [
+            [
+                "c7705564ca4febd6"
+            ]
+        ]
+    },
+    {
+        "id": "717669c06ab57328",
+        "type": "link in",
+        "z": "4b705cf7bd70f406",
+        "name": "Update Schedule In 2",
+        "links": [
+            "89c661fc7f232a5b"
+        ],
+        "x": 35,
+        "y": 1260,
+        "wires": [
+            [
+                "973d4bc7852cd8e4"
+            ]
+        ]
+    },
+    {
+        "id": "f7fc53f5605b6d4c",
+        "type": "link in",
+        "z": "4b705cf7bd70f406",
+        "name": "Init in 2",
+        "links": [
+            "e87b1f11e0400883"
+        ],
+        "x": 585,
+        "y": 920,
+        "wires": [
+            [
+                "6083c329f92384af"
+            ]
+        ]
+    },
+    {
+        "id": "220b8c21409882b5",
+        "type": "ui_template",
+        "z": "4b705cf7bd70f406",
+        "group": "b3fc61f089948690",
+        "name": "Show Week Schedule",
+        "order": 6,
+        "width": "0",
+        "height": "0",
+        "format": "<style>\n    .week-schedule {\n        display: flex;\n        flex-direction: column;\n        gap: 8px;\n        font-family: sans-serif;\n    }\n\n    .day-section {\n        background: #f9f9f9;\n        border: 1px solid #ccc;\n        border-radius: 6px;\n        padding: 6px;\n    }\n\n    .day-header {\n        background: #eee;\n        padding: 4px;\n        text-align: left;\n        font-weight: bold;\n        border-radius: 4px;\n    }\n\n    .event {\n        margin: 4px 0;\n        padding: 4px;\n        background: #42ABB3;\n        border-radius: 3px;\n        font-size: 0.85em;\n        cursor: pointer;\n    }\n\n    .event.selected {\n        background: #88a;\n        color: #fff;\n    }\n\n    .temp {\n        float: right;\n    }\n\n    .remove-btn {\n        margin: 10px auto 0;\n        display: block;\n    }\n</style>\n\n<script>\n    //Chat\n    (function(heaterSchedule) {\n    heaterSchedule.schedule = {\n      Sunday:[], Monday:[], Tuesday:[],\n      Wednesday:[], Thursday:[],\n      Friday:[], Saturday:[]\n    };\n    \n    heaterSchedule.days = Object.keys(heaterSchedule.schedule);\n    heaterSchedule.selected = { day: null, idx: null };\n    \n    // 2. Watch for incoming messages and use msg.payload as the new schedule\n    heaterSchedule.$watch('msg.payload', function(newPayload) {\n        if (!newPayload) { return; }\n        // assign the incoming object\n        heaterSchedule.schedule = newPayload;\n        // rebuild the day-list (so ng-repeat respects the object keys in correct order)\n        heaterSchedule.days = Object.keys(heaterSchedule.schedule);\n        // clear any stale selection\n        heaterSchedule.selected = { day: null, idx: null };\n        // trigger a digest so the view refreshes\n        heaterSchedule.$applyAsync();\n    });\n    \n    // 3) Track which event is selected\n    heaterSchedule.selected = { day: null, idx: null };\n    \n    heaterSchedule.selectEvent = function(day, idx) {\n        heaterSchedule.selected = { day: day, idx: idx };\n    };\n    \n    // 4) Remove and emit updated schedule\n    heaterSchedule.removeSelected = function() {\n        if (heaterSchedule.selected.day !== null) {\n            heaterSchedule.schedule[heaterSchedule.selected.day].splice(heaterSchedule.selected.idx, 1);\n            // reset selection\n            heaterSchedule.selected = { day: null, idx: null };\n            // send new schedule out as msg.payload\n            heaterSchedule.send({ payload: heaterSchedule.schedule });\n    }\n    };\n  })(scope);\n</script>\n\n<div class=\"week-schedule\">\n    <div class=\"day-section\" ng-repeat=\"day in days\">\n        <div class=\"day-header\">{{day}}</div>\n        <div class=\"event\" ng-repeat=\"evt in schedule[day] track by $index\"\n            ng-class=\"{'selected': selected.day===day && selected.idx===$index}\" ng-click=\"selectEvent(day, $index)\">\n            <span class=\"startTime\">{{evt.startTime}} : {{evt.stopTime}}</span>\n            <span class=\"temp\">{{evt.temp}}°F</span>\n        </div>\n        <div ng-if=\"!schedule[day].length\" class=\"event\">\n            No schedule\n        </div>\n    </div>\n</div>\n\n<button class=\"remove-btn nr-dashboard-button\"\n        ng-click=\"removeSelected()\"\n        ng-disabled=\"selected.day===null\">\n  Remove\n</button>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1120,
+        "y": 1260,
+        "wires": [
+            [
+                "775a4d88cdf5ed75"
+            ]
+        ]
+    },
+    {
+        "id": "efe9817bbff17031",
+        "type": "comment",
+        "z": "4b705cf7bd70f406",
+        "name": "Check for Valid Schedule Inputs",
+        "info": "",
+        "x": 150,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "98fec9a12d9fd2dd",
+        "type": "ui_slider",
+        "z": "4b705cf7bd70f406",
+        "name": "",
+        "label": "Temperature Set",
+        "tooltip": "",
+        "group": "b3fc61f089948690",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "80",
+        "step": 1,
+        "className": "",
+        "x": 410,
+        "y": 1160,
+        "wires": [
+            [
+                "88c105631ee1818c"
+            ]
+        ]
+    },
+    {
+        "id": "ecde6dcb1489e67a",
+        "type": "catch",
+        "z": "4b705cf7bd70f406",
+        "name": "Write New Empty Schedule File",
+        "scope": [
+            "bcc0fd506e64db7b"
+        ],
+        "uncaught": false,
+        "x": 150,
+        "y": 1420,
+        "wires": [
+            [
+                "b14666ebff6445a5"
+            ]
+        ]
+    },
+    {
+        "id": "12622b603d39cd11",
+        "type": "debug",
+        "z": "4b705cf7bd70f406",
+        "name": "Check For File Missing Error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "b14666ebff6445a5",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Empty Weekly Schedule Template",
+        "func": "msg.payload = {\n    \"Sunday\": [],\n    \"Monday\": [],\n    \"Tuesday\": [],\n    \"Wednesday\": [],\n    \"Thursday\": [],\n    \"Friday\": [],\n    \"Saturday\": []\n};\nmsg.filename = env.get(\"HOME\") + \"/HeaterSchedule.json\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1420,
+        "wires": [
+            [
+                "4cb073f3a767fc43"
+            ]
+        ]
+    },
+    {
+        "id": "4cb073f3a767fc43",
+        "type": "file",
+        "z": "4b705cf7bd70f406",
+        "name": "Write New Schedule File",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 750,
+        "y": 1420,
+        "wires": [
+            [
+                "12622b603d39cd11"
+            ]
+        ]
+    },
+    {
+        "id": "358fafcd7e6a9aff",
+        "type": "link out",
+        "z": "4b705cf7bd70f406",
+        "name": "LED Indicator Manual Override Out",
+        "mode": "link",
+        "links": [
+            "67f021a0553f3656"
+        ],
+        "x": 1115,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "8fae9193c244106a",
+        "type": "file",
+        "z": "4b705cf7bd70f406",
+        "name": "Write Heater Log",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1630,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33e28b53ed27af58",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Log Manual Control",
+        "func": "const now = new Date(); //System Time\nconst nowUSFormat = new Date(now.toLocaleString('en-US'));\nconst hours = String(nowUSFormat.getHours()).padStart(2, '0');\nconst minutes = String(nowUSFormat.getMinutes()).padStart(2, '0');\nconst seconds = String(nowUSFormat.getSeconds()).padStart(2, '0');\nconst year = nowUSFormat.getFullYear();\nconst month = nowUSFormat.getMonth() + 1;\nconst day = nowUSFormat.getDate();\nlet date = `${year}/${month}/${day}`;\nlet time = `${hours}:${minutes}:${seconds}`;\n\nlet heaterState = msg.payload == 1 ? \"On\" : \"Off\";\nmsg.payload = `${date} ${time} - Room Temp:${global.get(\"roomTemp\")}F - Manual Control - Heater Turning ${heaterState}.`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 560,
+        "wires": [
+            [
+                "55290ac782cacfbc"
+            ]
+        ]
+    },
+    {
+        "id": "09987f2de726d9a9",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Log Initialization",
+        "func": "const now = new Date(); //System Time\nconst nowUSFormat = new Date(now.toLocaleString('en-US'));\nconst hours = String(nowUSFormat.getHours()).padStart(2, '0');\nconst minutes = String(nowUSFormat.getMinutes()).padStart(2, '0');\nconst seconds = String(nowUSFormat.getSeconds()).padStart(2, '0');\nconst year = nowUSFormat.getFullYear();\nconst month = nowUSFormat.getMonth() + 1;\nconst day = nowUSFormat.getDate();\nlet date = `${year}/${month}/${day}`;\nlet time = `${hours}:${minutes}:${seconds}`;\n\nlet heaterState = msg.payload == 1 ? \"On\" : \"Off\";\nmsg.payload = `${date} ${time} - Room Temp:${global.get(\"roomTemp\")}F - Initialization - Heater Set ${heaterState} and system ready.`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 60,
+        "wires": [
+            [
+                "4368ecb4e60cd010"
+            ]
+        ]
+    },
+    {
+        "id": "dfec7e20f691b573",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Log Temperature Probe State",
+        "func": "const now = new Date(); //System Time\nconst nowUSFormat = new Date(now.toLocaleString('en-US'));\nconst hours = String(nowUSFormat.getHours()).padStart(2, '0');\nconst minutes = String(nowUSFormat.getMinutes()).padStart(2, '0');\nconst seconds = String(nowUSFormat.getSeconds()).padStart(2, '0');\nconst year = nowUSFormat.getFullYear();\nconst month = nowUSFormat.getMonth() + 1;\nconst day = nowUSFormat.getDate();\nlet date = `${year}/${month}/${day}`;\nlet time = `${hours}:${minutes}:${seconds}`;\n\nlet temperatureValue = global.get(\"roomTemp\");\nlet currentType = typeof msg.payload;\nlet lastType = context.get(\"lastType\");\n\n//Make String\nif (msg.payload === undefined) {\n    currentType = \"undefined\";\n}\n\nif (currentType !== lastType) {\n    context.set(\"lastType\", currentType);\n    if (currentType == \"undefined\"){\n        msg.payload = `${date} ${time} - Sensor Disconnect - Temperature Value:${temperatureValue}F`;\n    }\n    else{\n        msg.payload = `${date} ${time} - Sensor Connected - Temperature Value:${temperatureValue}F`;\n    }\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 820,
+        "wires": [
+            [
+                "742ceec51fbd1913"
+            ]
+        ]
+    },
+    {
+        "id": "e15406de9d8264b2",
+        "type": "link in",
+        "z": "4b705cf7bd70f406",
+        "name": "Write To Heater Log In",
+        "links": [
+            "4368ecb4e60cd010",
+            "41bcc0f53f234775",
+            "51b831fc7693ea0a",
+            "fb18e6077f78809f"
+        ],
+        "x": 1265,
+        "y": 520,
+        "wires": [
+            [
+                "55290ac782cacfbc"
+            ]
+        ]
+    },
+    {
+        "id": "4368ecb4e60cd010",
+        "type": "link out",
+        "z": "4b705cf7bd70f406",
+        "name": "Log Initialization Out",
+        "mode": "link",
+        "links": [
+            "e15406de9d8264b2"
+        ],
+        "x": 1695,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "41bcc0f53f234775",
+        "type": "link out",
+        "z": "4b705cf7bd70f406",
+        "name": "Log Temperature Sensor State Out",
+        "mode": "link",
+        "links": [
+            "e15406de9d8264b2"
+        ],
+        "x": 755,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "dd4535a99b364964",
+        "type": "comment",
+        "z": "4b705cf7bd70f406",
+        "name": "Creates Empty Heater Schedule File If Missing",
+        "info": "",
+        "x": 190,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "d1285f5cd08944aa",
+        "type": "ui_numeric",
+        "z": "4b705cf7bd70f406",
+        "name": "1-Hour Temp Set",
+        "label": "1-Hour Temp Set",
+        "tooltip": "",
+        "group": "10ebac4a7e923c3d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}} &degF",
+        "min": 0,
+        "max": "80",
+        "step": 1,
+        "className": "",
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [
+                "e3150221b821db01"
+            ]
+        ]
+    },
+    {
+        "id": "2c5514e2fa774b61",
+        "type": "comment",
+        "z": "4b705cf7bd70f406",
+        "name": "1-Hour Temp Set",
+        "info": "",
+        "x": 100,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e3150221b821db01",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Set Global Var",
+        "func": "global.set(\"oneHourTempSet\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5d726316a72a024",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Default Value",
+        "func": "msg.payload = 60; //Fahrenheit\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "d1285f5cd08944aa"
+            ]
+        ]
+    },
+    {
+        "id": "6022207dc0b4ebe1",
+        "type": "link in",
+        "z": "4b705cf7bd70f406",
+        "name": "1-Hour Temp Set In",
+        "links": [
+            "b5bd0be6dd35a91c"
+        ],
+        "x": 35,
+        "y": 240,
+        "wires": [
+            [
+                "f5d726316a72a024"
+            ]
+        ]
+    },
+    {
+        "id": "5c5cfea5cd0dd02e",
+        "type": "ui_switch",
+        "z": "4b705cf7bd70f406",
+        "name": "1-Hour Switch",
+        "label": "1-Hour Switch",
+        "tooltip": "",
+        "group": "10ebac4a7e923c3d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "5bdfe784b5e6947c"
+            ]
+        ]
+    },
+    {
+        "id": "9890bc1a3cfbfa61",
+        "type": "comment",
+        "z": "4b705cf7bd70f406",
+        "name": "1-Hour Switch",
+        "info": "",
+        "x": 90,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "edc476426993dd8e",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Enable",
+        "func": "global.set(\"oneHourSwitchState\", 1);\nmsg.payload = 1;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 420,
+        "wires": [
+            [
+                "520327dfb69a2f32",
+                "ccc5b24c24bab434"
+            ]
+        ]
+    },
+    {
+        "id": "78d8d2eb62fa70ca",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Disable",
+        "func": "global.set(\"oneHourSwitchState\", 0);\nmsg.payload = 0;\nmsg.reset = \"\"; //Stop 1 Hour Timeout\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 380,
+        "wires": [
+            [
+                "520327dfb69a2f32",
+                "d77e0350b4860708"
+            ]
+        ]
+    },
+    {
+        "id": "5bdfe784b5e6947c",
+        "type": "switch",
+        "z": "4b705cf7bd70f406",
+        "name": "State",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 400,
+        "wires": [
+            [
+                "78d8d2eb62fa70ca"
+            ],
+            [
+                "edc476426993dd8e"
+            ]
+        ]
+    },
+    {
+        "id": "520327dfb69a2f32",
+        "type": "delay",
+        "z": "4b705cf7bd70f406",
+        "name": "1 Hour Timeout",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "hours",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 660,
+        "y": 400,
+        "wires": [
+            [
+                "4ed367a564be2ecb"
+            ]
+        ]
+    },
+    {
+        "id": "4ed367a564be2ecb",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Adjust Payload",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 400,
+        "wires": [
+            [
+                "8d9190b26968e97b",
+                "d7b7b833243c15fa"
+            ]
+        ]
+    },
+    {
+        "id": "8d9190b26968e97b",
+        "type": "link out",
+        "z": "4b705cf7bd70f406",
+        "name": "1-Hour Switch Control Out",
+        "mode": "link",
+        "links": [
+            "9dcc0a1e350fe0fc"
+        ],
+        "x": 1055,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "9dcc0a1e350fe0fc",
+        "type": "link in",
+        "z": "4b705cf7bd70f406",
+        "name": "1-Hour Switch Control In",
+        "links": [
+            "8d9190b26968e97b"
+        ],
+        "x": 35,
+        "y": 400,
+        "wires": [
+            [
+                "5c5cfea5cd0dd02e"
+            ]
+        ]
+    },
+    {
+        "id": "d7b7b833243c15fa",
+        "type": "link out",
+        "z": "4b705cf7bd70f406",
+        "name": "LED Indicator 1-Hour Switch Control Out",
+        "mode": "link",
+        "links": [
+            "67f021a0553f3656"
+        ],
+        "x": 1055,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b40e8ff8abc4b6e3",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Log 1 Hour Switch Toggle",
+        "func": "const now = new Date(); //System Time\nconst nowUSFormat = new Date(now.toLocaleString('en-US'));\nconst hours = String(nowUSFormat.getHours()).padStart(2, '0');\nconst minutes = String(nowUSFormat.getMinutes()).padStart(2, '0');\nconst seconds = String(nowUSFormat.getSeconds()).padStart(2, '0');\nconst year = nowUSFormat.getFullYear();\nconst month = nowUSFormat.getMonth() + 1;\nconst day = nowUSFormat.getDate();\nlet date = `${year}/${month}/${day}`;\nlet time = `${hours}:${minutes}:${seconds}`;\n\nlet heaterState = msg.payload == 1 ? \"On\" : \"Off\";\nmsg.payload = `${date} ${time} - Room Temp:${global.get(\"roomTemp\")}F - 1 Hour Switch Toggled ${heaterState}.`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 400,
+        "wires": [
+            [
+                "fb18e6077f78809f"
+            ]
+        ]
+    },
+    {
+        "id": "fb18e6077f78809f",
+        "type": "link out",
+        "z": "4b705cf7bd70f406",
+        "name": "Log 1-Hour Switch Out",
+        "mode": "link",
+        "links": [
+            "e15406de9d8264b2"
+        ],
+        "x": 1315,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "08be6fd148529ed8",
+        "type": "link in",
+        "z": "4b705cf7bd70f406",
+        "name": "1-Hour Switch Control Turn Off In",
+        "links": [
+            "ef254e512e69c9a2"
+        ],
+        "x": 35,
+        "y": 480,
+        "wires": [
+            [
+                "2b53dc303fe2e245"
+            ]
+        ]
+    },
+    {
+        "id": "57919e690ddcf64b",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Manual Control Turned On",
+        "func": "msg.payload = 0;\nmsg.manualControlTurnOff = 1;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 480,
+        "wires": [
+            [
+                "5c5cfea5cd0dd02e"
+            ]
+        ]
+    },
+    {
+        "id": "ef254e512e69c9a2",
+        "type": "link out",
+        "z": "4b705cf7bd70f406",
+        "name": "1-Hour Switch Control Turn Off Out",
+        "mode": "link",
+        "links": [
+            "08be6fd148529ed8"
+        ],
+        "x": 685,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "2b53dc303fe2e245",
+        "type": "switch",
+        "z": "4b705cf7bd70f406",
+        "name": "1-Hour Switch State",
+        "property": "oneHourSwitchState",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 180,
+        "y": 480,
+        "wires": [
+            [
+                "57919e690ddcf64b"
+            ]
+        ]
+    },
+    {
+        "id": "981fa26cd3a5ec5a",
+        "type": "switch",
+        "z": "4b705cf7bd70f406",
+        "name": "Check if Manual Control Turned This Off",
+        "property": "manualControlTurnOff",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 840,
+        "y": 340,
+        "wires": [
+            [
+                "d7b7b833243c15fa"
+            ]
+        ]
+    },
+    {
+        "id": "2aeb5c1e3d5b4b38",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Filename and Path",
+        "func": "msg.filename = env.get(\"HOME\") + \"/HeaterSchedule.json\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1320,
+        "wires": [
+            [
+                "c8c1e334ec3da629"
+            ]
+        ]
+    },
+    {
+        "id": "1289e41fa79c4762",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Filename and Path",
+        "func": "msg.filename = env.get(\"HOME\") + \"/HeaterSchedule.json\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 100,
+        "wires": [
+            [
+                "bcc0fd506e64db7b"
+            ]
+        ]
+    },
+    {
+        "id": "d6348dc74d2e8c5b",
+        "type": "comment",
+        "z": "4b705cf7bd70f406",
+        "name": "Delete Contents of Log Weekly",
+        "info": "",
+        "x": 150,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "c4a5169eab0eb0ff",
+        "type": "inject",
+        "z": "4b705cf7bd70f406",
+        "name": "Time to Overwrite",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 05 * * 0",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 1520,
+        "wires": [
+            [
+                "4665c623570ee61e"
+            ]
+        ]
+    },
+    {
+        "id": "ab6f3b0d196a6831",
+        "type": "file",
+        "z": "4b705cf7bd70f406",
+        "name": "Overwrite HeaterState.log",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 590,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4665c623570ee61e",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Filename and Path",
+        "func": "msg.filename = env.get(\"HOME\") + \"/HeaterState.log\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1520,
+        "wires": [
+            [
+                "ab6f3b0d196a6831"
+            ]
+        ]
+    },
+    {
+        "id": "55290ac782cacfbc",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Filename and Path",
+        "func": "msg.filename = env.get(\"HOME\") + \"/HeaterState.log\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 560,
+        "wires": [
+            [
+                "8fae9193c244106a"
+            ]
+        ]
+    },
+    {
+        "id": "742ceec51fbd1913",
+        "type": "delay",
+        "z": "4b705cf7bd70f406",
+        "name": "Delay Message by 500ms",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 820,
+        "wires": [
+            [
+                "41bcc0f53f234775"
+            ]
+        ]
+    },
+    {
+        "id": "72a6fedf2c2cd2f6",
+        "type": "function",
+        "z": "4c416469df6f7565",
+        "name": "Get Day & Time",
+        "func": "const days = [\n    \"Sunday\",\n    \"Monday\",\n    \"Tuesday\",\n    \"Wednesday\",\n    \"Thursday\",\n    \"Friday\",\n    \"Saturday\"\n]\n\nlet now = new Date(msg.payload);  //System Time\nconst nowUSFormat = new Date(now.toLocaleString('en-US'));\nmsg.day = days[nowUSFormat.getDay()];\nmsg.hour = parseInt(nowUSFormat.getHours());\nmsg.min = parseInt(nowUSFormat.getMinutes());\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 140,
+        "wires": [
+            [
+                "c1325107571e049f"
+            ]
+        ]
+    },
+    {
+        "id": "42cf7a9116674a63",
+        "type": "inject",
+        "z": "4c416469df6f7565",
+        "name": "1 Sec Interval",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "object",
+        "payloadType": "date",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "27df6dbb1938f6f0"
+            ]
+        ]
+    },
+    {
+        "id": "a0c26f1341cf58f5",
+        "type": "comment",
+        "z": "4c416469df6f7565",
+        "name": "Heater Logic",
+        "info": "",
+        "x": 90,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c1325107571e049f",
+        "type": "function",
+        "z": "4c416469df6f7565",
+        "name": "Check Daily Schedule Time",
+        "func": "let schedule = global.get(\"heaterSchedule\");\nlet daySchedule = schedule[msg.day];\n\nfor (let i = 0; i < daySchedule.length; i++){\n    //StartTime\n    let [startTime, startTimePeriod] = daySchedule[i].startTime.split(\" \");\n    let [schStartHourStr, schStartMinStr] = startTime.split(\":\");\n    let schStartMinsSinceMidnight = 0;\n    if (startTimePeriod == \"PM\") {\n        schStartMinsSinceMidnight = ((parseInt(schStartHourStr) + 12) * 60) + parseInt(schStartMinStr);\n    }\n    else{\n        if (schStartHourStr == 12){ // Since 12am is 0 in 24 hr format\n            schStartMinsSinceMidnight = parseInt(schStartMinStr)\n        }\n        else{\n            schStartMinsSinceMidnight = (parseInt(schStartHourStr) * 60) + parseInt(schStartMinStr);\n        }\n    }\n\n    //StopTime\n    let [stopTime, stopTimePeriod] = daySchedule[i].stopTime.split(\" \");\n    let [schStopHourStr, schStopMinStr] = stopTime.split(\":\");\n    let schStopMinsSinceMidnight = (parseInt(schStopHourStr) * 60) + parseInt(schStopMinStr);\n    //let schEndMin = parseInt(schEndMinStr);\n    if (stopTimePeriod == \"PM\") {\n        schStopMinsSinceMidnight = ((parseInt(schStopHourStr) + 12) * 60) + parseInt(schStopMinStr);\n    }\n    else{\n        if (schStopHourStr == 12){\n            schStopMinsSinceMidnight = parseInt(schStopMinStr);\n        }\n        else{\n            schStopMinsSinceMidnight = (parseInt(schStopHourStr) * 60) + parseInt(schStopMinStr);\n        }\n    }\n\n    //Current Mins since midnight\n    let currentMinsSinceMidnight = (msg.hour * 60) + msg.min;\n\n    //Is between scheduled time\n    if (currentMinsSinceMidnight >= schStartMinsSinceMidnight && currentMinsSinceMidnight <= schStopMinsSinceMidnight){\n        msg.payload = 1;\n        msg.scheduleTemp = daySchedule[i].temp;\n        break;\n    }\n    else{\n        msg.payload = 0;\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 140,
+        "wires": [
+            [
+                "6a0beaedb0e5156b"
+            ]
+        ]
+    },
+    {
+        "id": "03513d3490b6490f",
+        "type": "rpi-gpio out",
+        "z": "4c416469df6f7565",
+        "name": "Heater Relay Switch",
+        "pin": "18",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 1680,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "98e0501abd31426e",
+        "type": "switch",
+        "z": "4c416469df6f7565",
+        "name": "Manual Override State",
+        "property": "manualControlState",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 540,
+        "y": 120,
+        "wires": [
+            [
+                "eb3f879e6180c2de"
+            ]
+        ]
+    },
+    {
+        "id": "27df6dbb1938f6f0",
+        "type": "switch",
+        "z": "4c416469df6f7565",
+        "name": "Valid Temp Input",
+        "property": "roomTemp",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "null"
+            },
+            {
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "98e0501abd31426e"
+            ],
+            [
+                "18d8fbea4785b22f"
+            ],
+            [
+                "18d8fbea4785b22f"
+            ]
+        ]
+    },
+    {
+        "id": "18d8fbea4785b22f",
+        "type": "function",
+        "z": "4c416469df6f7565",
+        "name": "Turn Off When Sensor Disconnect",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 180,
+        "wires": [
+            [
+                "723f8d705648f008"
+            ]
+        ]
+    },
+    {
+        "id": "dc0865137b30320b",
+        "type": "ui_template",
+        "z": "4c416469df6f7565",
+        "group": "10ebac4a7e923c3d",
+        "name": "LED Indicator",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; margin:0; padding:0; overflow:hidden;\">\n  <div \n    style=\"width:20px; height:20px; border-radius:50%; margin:0; padding:0;\"\n    ng-style=\"{'background-color': (msg.payload == 1 ? 'green' : 'red')}\">\n  </div>\n  <span style=\"margin:0; padding:0; line-height:1; font-size:20px;\">\n    {{msg.payload == 1 ? 'Heater On' : 'Heater Off'}}\n  </span>\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1660,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "67f021a0553f3656",
+        "type": "link in",
+        "z": "4c416469df6f7565",
+        "name": "LED Indicator Manual Override In",
+        "links": [
+            "358fafcd7e6a9aff",
+            "d7b7b833243c15fa"
+        ],
+        "x": 1525,
+        "y": 220,
+        "wires": [
+            [
+                "dc0865137b30320b"
+            ]
+        ]
+    },
+    {
+        "id": "ba8416e411c3f563",
+        "type": "rbe",
+        "z": "4c416469df6f7565",
+        "name": "State Changed",
+        "func": "rbei",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1660,
+        "y": 100,
+        "wires": [
+            [
+                "9933a66ee9639ff4"
+            ]
+        ]
+    },
+    {
+        "id": "51b831fc7693ea0a",
+        "type": "link out",
+        "z": "4c416469df6f7565",
+        "name": "Log Schedule Control Out",
+        "mode": "link",
+        "links": [
+            "e15406de9d8264b2"
+        ],
+        "x": 2015,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "eb3f879e6180c2de",
+        "type": "switch",
+        "z": "4c416469df6f7565",
+        "name": "1-Hour Switch",
+        "property": "oneHourSwitchState",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 760,
+        "y": 120,
+        "wires": [
+            [
+                "d1c5361b3c14c41c"
+            ],
+            [
+                "72a6fedf2c2cd2f6"
+            ]
+        ]
+    },
+    {
+        "id": "d1c5361b3c14c41c",
+        "type": "function",
+        "z": "4c416469df6f7565",
+        "name": "Get One Hour Temp Set",
+        "func": "msg.oneHourTempSet = global.get(\"oneHourTempSet\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 100,
+        "wires": [
+            [
+                "39c3d28c8a63ae3e"
+            ]
+        ]
+    },
+    {
+        "id": "6a0beaedb0e5156b",
+        "type": "function",
+        "z": "4c416469df6f7565",
+        "name": "Thermostat Control",
+        "func": "let currentRoomTemp = global.get(\"roomTemp\");\nlet minimumRoomTemp = global.get(\"minimumRoomTemp\");\nlet currentHeaterPinState = global.get(\"currentHeaterPinState\");\nlet lastHeaterSource = global.get(\"lastHeaterSource\") || \"Unknown\";\n\nlet scheduleTemp = (msg.scheduleTemp !== undefined && msg.scheduleTemp !== null) ? msg.scheduleTemp : -1;\nlet oneHourTempSet = (msg.oneHourTempSet !== undefined && msg.oneHourTempSet !== null) ? msg.oneHourTempSet : -1;\nlet threshold = 1.0;\nlet setpoint = Math.max(oneHourTempSet, scheduleTemp, minimumRoomTemp);\n\nmsg.setpoint = setpoint;\n\n// Default false if undefined\nif (currentHeaterPinState === undefined || currentHeaterPinState === null) {\n    currentHeaterPinState = false;\n}\n\nlet newState = currentHeaterPinState;\n\n// ON\nif (!currentHeaterPinState && currentRoomTemp <= (setpoint - threshold)) {\n    newState = true;\n\n    // Determine which source turned the heater ON\n    if (oneHourTempSet > scheduleTemp && oneHourTempSet >= minimumRoomTemp) {\n        lastHeaterSource = \"1 Hour Switch\";\n    } else if (scheduleTemp > oneHourTempSet && scheduleTemp >= minimumRoomTemp) {\n        lastHeaterSource = \"Scheduled Period\";\n    } else {\n        lastHeaterSource = \"Minimum Temp\";\n    }\n\n    global.set(\"lastHeaterSource\", lastHeaterSource);\n}\n\n// OFF\nelse if (currentHeaterPinState && currentRoomTemp >= (setpoint + threshold)) {\n    newState = false;\n    // Keep the same lastHeaterSource, so logger knows who started it\n}\n\nglobal.set(\"currentHeaterPinState\", newState);\nmsg.payload = newState ? 1 : 0;\nmsg.lastHeaterSource = lastHeaterSource;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 120,
+        "wires": [
+            [
+                "ba8416e411c3f563",
+                "03513d3490b6490f",
+                "dc0865137b30320b"
+            ]
+        ]
+    },
+    {
+        "id": "9933a66ee9639ff4",
+        "type": "function",
+        "z": "4c416469df6f7565",
+        "name": "Log Heater State",
+        "func": "const now = new Date(); //System Time\nconst nowUSFormat = new Date(now.toLocaleString('en-US'));\nconst hours = String(nowUSFormat.getHours()).padStart(2, '0');\nconst minutes = String(nowUSFormat.getMinutes()).padStart(2, '0');\nconst seconds = String(nowUSFormat.getSeconds()).padStart(2, '0');\nconst year = nowUSFormat.getFullYear();\nconst month = nowUSFormat.getMonth() + 1;\nconst day = nowUSFormat.getDate();\nlet date = `${year}/${month}/${day}`;\nlet time = `${hours}:${minutes}:${seconds}`;\n\nlet heaterState = msg.payload == 1 ? \"On\" : \"Off\";\nlet lastSource = msg.lastHeaterSource || global.get(\"lastHeaterSource\") || \"Unknown\";\nmsg.payload = `${date} ${time} - Room Temp:${global.get(\"roomTemp\")}F - ${lastSource} - Heater Turning ${heaterState}.`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1870,
+        "y": 100,
+        "wires": [
+            [
+                "51b831fc7693ea0a"
+            ]
+        ]
+    },
+    {
+        "id": "eeecde82076244a0",
+        "type": "ui_numeric",
+        "z": "2ae2a200c9aa104b",
+        "name": "",
+        "label": "Minimum Room Temp",
+        "tooltip": "",
+        "group": "37244093dc9c3233",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}} &degF",
+        "min": 0,
+        "max": "80",
+        "step": 1,
+        "className": "",
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "b22b86e2f2a54c98"
+            ]
+        ]
+    },
+    {
+        "id": "10123dbbfe9c5721",
+        "type": "comment",
+        "z": "2ae2a200c9aa104b",
+        "name": "Minimum Room Temp",
+        "info": "",
+        "x": 120,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b22b86e2f2a54c98",
+        "type": "function",
+        "z": "2ae2a200c9aa104b",
+        "name": "Set Global Var",
+        "func": "global.set(\"minimumRoomTemp\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5be5aa9e9f9ccd92",
+        "type": "function",
+        "z": "2ae2a200c9aa104b",
+        "name": "Default Value",
+        "func": "msg.payload = 50; //Fahrenheit\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "eeecde82076244a0"
+            ]
+        ]
+    },
+    {
+        "id": "b02fb1254161997f",
+        "type": "link in",
+        "z": "2ae2a200c9aa104b",
+        "name": "Min Room Temp In",
+        "links": [
+            "b5bd0be6dd35a91c"
+        ],
+        "x": 35,
+        "y": 100,
+        "wires": [
+            [
+                "5be5aa9e9f9ccd92"
+            ]
+        ]
+    },
+    {
+        "id": "f1e63bae6f19de60",
+        "type": "inject",
+        "z": "5d3c315c16cfadb9",
+        "name": "Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "c22fa0e779867915"
+            ]
+        ]
+    },
+    {
+        "id": "867605b07a2825fb",
+        "type": "debug",
+        "z": "5d3c315c16cfadb9",
+        "name": "manualControlState",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c22fa0e779867915",
+        "type": "function",
+        "z": "5d3c315c16cfadb9",
+        "name": "manualControlState",
+        "func": "msg.payload = global.get(\"manualControlState\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "867605b07a2825fb"
+            ]
+        ]
+    },
+    {
+        "id": "669da9320457830a",
+        "type": "inject",
+        "z": "5d3c315c16cfadb9",
+        "name": "Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "ce91aa7148842aa7"
+            ]
+        ]
+    },
+    {
+        "id": "0f94cd6c7e5eb2f5",
+        "type": "debug",
+        "z": "5d3c315c16cfadb9",
+        "name": "currentHeaterPinState",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ce91aa7148842aa7",
+        "type": "function",
+        "z": "5d3c315c16cfadb9",
+        "name": "currentHeaterPinState",
+        "func": "msg.payload = global.get(\"currentHeaterPinState\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 100,
+        "wires": [
+            [
+                "0f94cd6c7e5eb2f5"
+            ]
+        ]
+    },
+    {
+        "id": "5786e162ab088423",
+        "type": "inject",
+        "z": "5d3c315c16cfadb9",
+        "name": "Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 340,
+        "wires": [
+            [
+                "67baa2fac7dc9d90"
+            ]
+        ]
+    },
+    {
+        "id": "d9da1921003234af",
+        "type": "debug",
+        "z": "5d3c315c16cfadb9",
+        "name": "oneHourTempSet",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "67baa2fac7dc9d90",
+        "type": "function",
+        "z": "5d3c315c16cfadb9",
+        "name": "oneHourTempSet",
+        "func": "msg.payload = global.get(\"oneHourTempSet\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 340,
+        "wires": [
+            [
+                "d9da1921003234af"
+            ]
+        ]
+    },
+    {
+        "id": "9aa76126e5a07a33",
+        "type": "inject",
+        "z": "5d3c315c16cfadb9",
+        "name": "Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 300,
+        "wires": [
+            [
+                "80d59ff5f98cc444"
+            ]
+        ]
+    },
+    {
+        "id": "2bece3a85441ad46",
+        "type": "debug",
+        "z": "5d3c315c16cfadb9",
+        "name": "oneHourSwitchState",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "80d59ff5f98cc444",
+        "type": "function",
+        "z": "5d3c315c16cfadb9",
+        "name": "oneHourSwitchState",
+        "func": "msg.payload = global.get(\"oneHourSwitchState\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 300,
+        "wires": [
+            [
+                "2bece3a85441ad46"
+            ]
+        ]
+    },
+    {
+        "id": "607b95dad785c01d",
+        "type": "inject",
+        "z": "5d3c315c16cfadb9",
+        "name": "Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 260,
+        "wires": [
+            [
+                "3ce1b70faf4437f5"
+            ]
+        ]
+    },
+    {
+        "id": "0e1023d5331640e6",
+        "type": "debug",
+        "z": "5d3c315c16cfadb9",
+        "name": "minimumRoomTemp",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3ce1b70faf4437f5",
+        "type": "function",
+        "z": "5d3c315c16cfadb9",
+        "name": "minimumRoomTemp",
+        "func": "msg.payload = global.get(\"minimumRoomTemp\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 260,
+        "wires": [
+            [
+                "0e1023d5331640e6"
+            ]
+        ]
+    },
+    {
+        "id": "f8ee09b1aee28318",
+        "type": "inject",
+        "z": "5d3c315c16cfadb9",
+        "name": "Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 140,
+        "wires": [
+            [
+                "a16d156c822be431"
+            ]
+        ]
+    },
+    {
+        "id": "fadddad43da09d78",
+        "type": "debug",
+        "z": "5d3c315c16cfadb9",
+        "name": "heaterSchedule",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "a16d156c822be431",
+        "type": "function",
+        "z": "5d3c315c16cfadb9",
+        "name": "heaterSchedule",
+        "func": "msg.payload = global.get(\"heaterSchedule\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "fadddad43da09d78"
+            ]
+        ]
+    },
+    {
+        "id": "a9340d707126ac0a",
+        "type": "inject",
+        "z": "5d3c315c16cfadb9",
+        "name": "Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 180,
+        "wires": [
+            [
+                "3a4a98b2e6bb5c87"
+            ]
+        ]
+    },
+    {
+        "id": "81992cf204fcd981",
+        "type": "debug",
+        "z": "5d3c315c16cfadb9",
+        "name": "lastHeaterSource",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3a4a98b2e6bb5c87",
+        "type": "function",
+        "z": "5d3c315c16cfadb9",
+        "name": "lastHeaterSource",
+        "func": "msg.payload = global.get(\"lastHeaterSource\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 180,
+        "wires": [
+            [
+                "81992cf204fcd981"
+            ]
+        ]
+    },
+    {
+        "id": "5f5521b688382709",
+        "type": "inject",
+        "z": "5d3c315c16cfadb9",
+        "name": "Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 380,
+        "wires": [
+            [
+                "f3ab030da793fbf0"
+            ]
+        ]
+    },
+    {
+        "id": "baf2390aeb4a6f03",
+        "type": "debug",
+        "z": "5d3c315c16cfadb9",
+        "name": "roomTemp",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f3ab030da793fbf0",
+        "type": "function",
+        "z": "5d3c315c16cfadb9",
+        "name": "roomTemp",
+        "func": "msg.payload = global.get(\"roomTemp\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 380,
+        "wires": [
+            [
+                "baf2390aeb4a6f03"
+            ]
+        ]
+    },
+    {
+        "id": "ce4b6e91e6f38bbe",
+        "type": "comment",
+        "z": "5d3c315c16cfadb9",
+        "name": "Debug nodes to individually see a value",
+        "info": "",
+        "x": 190,
+        "y": 60,
+        "wires": []
+    }
+]
