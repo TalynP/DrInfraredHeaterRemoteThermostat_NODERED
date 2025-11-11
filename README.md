@@ -71,7 +71,7 @@ Tuesday, Wednesday, Thursday, Friday, Saturday - No time periods
 
 
 ### Details
-For more information on how the Node-RED flows work reference _____
+For more information on how the Node-RED flows work reference [Node-REDFlowsExplained](./ReadMeAssets/Node-REDFlowsExplained.pdf)
 
 ## nginx and Remote Access
 ### nginx Reverse Proxy (Optional)
@@ -158,7 +158,7 @@ The Raspberry Pi Zero 2W, 5v power supply and relays are mounted to the [HeaterB
 The DS18B20 temperature probe should be at ran as far as possible from the heater and about 60 inches (152cm) from the floor. The reason to put the probe as far as possible from the heater is to allow time for the heat in the room to reach the temperature probe and evenly warm the room. The mount for the temperature probe is screwed to the wall and was 3D printed with PETG the [TemperatureProbeCase.stl](./ReadMeAssets/TemperatureProbeCase.stl) file is located in the ReadMeAssets folder.
 
 ## Wiring
-To wire the heater you should reference the [DR-966 Manual](./ReadMeAssets\DR-966Manual.pdf) in the ReadMeAssets folder or find it on the Dr Infrared Heater [website](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt) for the DR-966. I have included a [wiring diagram](/ReadMeAssets/WiringDiagram.pdf) for how to wire the heater starting from the heavy gauge wires running from your circuit breaker panel to the heater. The wiring diagram also notes the wire gauges that I used.  
+To wire the heater you should reference the [DR-966 Manual](./ReadMeAssets/DR-966Manual.pdf) in the ReadMeAssets folder or find it on the Dr Infrared Heater [website](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt) for the DR-966. I have included a [wiring diagram](/ReadMeAssets/WiringDiagram.pdf) for how to wire the heater starting from the heavy gauge wires running from your circuit breaker panel to the heater. The wiring diagram also notes the wire gauges that I used.  
 
 # Safety Disclaimer and Hazards
 This project is great for learning about the Linux command line interface (CLI), Node-RED, and the Internet of Things (IoT). Working with AC mains electricity, heating elements, and temperature controlled systems can be dangerous and may cause electrocution, burns, fire, property damage or violations of local electrical code if done incorrectly. __Always use safe practices for this project.__ The author assumes no responsibility, liability or fault for any damage, injury or other harm from the use of this project.
@@ -179,5 +179,5 @@ Finally, don't be dumb if you do not understand the dangers listed above don't d
 
 ### Future Features
 - Moving from node-red-dashboard to flowfuse/node-red-dashboard.
-- Celsius option for all temperature values
+- Celsius option for all temperature values.
 - Redesign to use solid state relays (SSRs) instead of mechanical relays.
