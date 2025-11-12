@@ -29,6 +29,13 @@ sudo systemctl enable nodered.service
 ```bash
 node-red-start
 ```  
+7. Once you see "Started flows" type Ctrl+C
+8. To enable the 1-wire interface
+```bash
+sudo raspi-config
+```  
+9. Navigate to Interface Options -> 1-Wire then select yes to enable
+10. Select finish and reboot the system
 
 ## Node-RED
 ### RPi.GPIO Library Install
