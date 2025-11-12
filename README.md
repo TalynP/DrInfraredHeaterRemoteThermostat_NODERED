@@ -57,12 +57,16 @@ http://<your IP or hostname>:1880
 5. Import the [Flows.json](./Flows.json) file ([Node_RED importing guide](https://nodered.org/docs/user-guide/editor/workspace/import-export))  
 6. Deploy the new flows  
 7. Enter the following in to a web browser to access the user interface
-```bash
+```
 http://<your IP or hostname>:1880/ui/
+```
+8. The Minimum Room Temp page is hidden by default from the navigation bar to access this page go to
+```
+http://<your IP or hostname>:1880/ui/#!/2
 ```
 
 ### Flow Files
-The Node-RED flows maintain two files the HeaterSchedule.json and HeaterState.log. The HeaterSchedule.json holds the time periods for the heater to maintain a temperature. Then the HeaterState.log writes when the heater turns on and off and logs the source that caused the heater to turn on or off.  
+The Node-RED flows maintain two files the HeaterSchedule.json and HeaterState.log. The HeaterSchedule.json holds the time periods for the heater to maintain a temperature. Then the HeaterState.log writes when the heater turns on and off and logs the source that caused the heater to change state.  
   
 An [example heater schedule](./ReadMeAssets/ExampleHeaterSchedule.json) is located in the ReadMeAssets and is described below:  
 Sunday - The system will hold 70°F from 8am to 10am  
@@ -70,8 +74,8 @@ Monday - The system will hold 65°F from 9am to 11am and will hold 77°F from 2p
 Tuesday, Wednesday, Thursday, Friday, Saturday - No time periods
 
 
-### Details
-For more information on how the Node-RED flows work reference [Node-REDFlowsExplained](./ReadMeAssets/Node-REDFlowsExplained.pdf)
+### Flow Details
+For more information on how the Node-RED flows work reference [Node-REDFlowsExplained](./ReadMeAssets/Node-REDFlowsExplained.pdf) located in the ReadMeAssets.
 
 ## nginx and Remote Access
 ### nginx Reverse Proxy (Optional)
@@ -152,13 +156,23 @@ A [bill of materials](./ReadMeAssets/DrInfraredHeaterRemoteThermostat_BOM.xlsx) 
 
 ## Mounting Components
 ### Mounting to the Heater
-The Raspberry Pi Zero 2W, 5v power supply and relays are mounted to the [HeaterBackMountPlate](./ReadMeAssets/HeaterBackMountPlate.stl) then that is attached to the back of the Dr Infrared Heater by two short sheet metal self taping screws. This mount was 3D printed with PETG (Polyethylene Terephthalate Glycol) the [HeaterBackMountPlate.stl](./ReadMeAssets/HeaterBackMountPlate.stl) file is located in the ReadMeAssets folder.
+The Raspberry Pi Zero 2W, 5v power supply and relays are mounted to the heater back mount plate then that is attached to the back of the Dr Infrared heater by two short self tapping screws. This mount was 3D printed with PETG (Polyethylene Terephthalate Glycol) the [HeaterBackMountPlate.stl](./ReadMeAssets/HeaterBackMountPlate.stl) file is located in the ReadMeAssets folder.  
+  
+Components mounted to heater back mount plate  
+    
+Components and back mount plate mounted to backside of DR-996 heater
+
+
 
 ### Mounting the Temperature Probe
-The DS18B20 temperature probe should be at ran as far as possible from the heater and about 60 inches (152cm) from the floor. The reason to put the probe as far as possible from the heater is to allow time for the heat in the room to reach the temperature probe and evenly warm the room. The mount for the temperature probe is screwed to the wall and was 3D printed with PETG the [TemperatureProbeCase.stl](./ReadMeAssets/TemperatureProbeCase.stl) file is located in the ReadMeAssets folder.
+The DS18B20 temperature probe should be at ran as far as possible from the heater and about 60 inches (152cm) from the floor. The reason to put the probe as far as possible from the heater is to allow time for the heat in the room to reach the temperature probe and evenly warm the room. The mount for the temperature probe is screwed to the wall and was 3D printed with PETG the [TemperatureProbeCase.stl](./ReadMeAssets/TemperatureProbeCase.stl) file is located in the ReadMeAssets folder. 
+
+Temperature probe mounted to the wall  
+
+![Common User Pages](./ReadMeAssets/TemperatureProbeCase.jpg)
 
 ## Wiring
-To wire the heater you should reference the [DR-966 Manual](./ReadMeAssets/DR-966Manual.pdf) in the ReadMeAssets folder or find it on the Dr Infrared Heater [website](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt) for the DR-966. I have included a [wiring diagram](/ReadMeAssets/WiringDiagram.pdf) for how to wire the heater starting from the heavy gauge wires running from your circuit breaker panel to the heater. The wiring diagram also notes the wire gauges that I used.  
+To wire the heater you should reference the [DR-966 Manual](./ReadMeAssets/DR-966Manual.pdf) in the ReadMeAssets folder or find it on the Dr Infrared Heater [website](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt) for the DR-966. I have included a [wiring diagram](/ReadMeAssets/WiringDiagram.pdf) for how to wire the heater starting from the heavy gauge wires running from your circuit breaker panel to the heater. The wiring diagram also notes the wire gauges that I used. This is located in the ReadMeAssets folder.  
 
 # Safety Disclaimer and Hazards
 This project is great for learning about the Linux command line interface (CLI), Node-RED, and the Internet of Things (IoT). Working with AC mains electricity, heating elements, and temperature controlled systems can be dangerous and may cause electrocution, burns, fire, property damage or violations of local electrical code if done incorrectly. __Always use safe practices for this project.__ The author assumes no responsibility, liability or fault for any damage, injury or other harm from the use of this project.
