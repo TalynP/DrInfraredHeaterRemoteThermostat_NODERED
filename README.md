@@ -21,7 +21,7 @@ sudo apt update && sudo apt upgrade -y
 bash <(curl -sL https://github.com/node-red/linux-installers/releases/latest/download/update-nodejs-and-nodered-deb)
 ```  
 4. When it asks "Would you like to install the Pi-specific nodes?" select yes
-5. Enable Node-RED Service to run on boot  
+5. Enable Node-RED service to run on boot  
 ```bash
 sudo systemctl enable nodered.service
 ```  
@@ -30,7 +30,7 @@ sudo systemctl enable nodered.service
 node-red-start
 ```  
 7. Once you see "Started flows" type Ctrl+C
-8. To enable the 1-wire interface
+8. Enable the 1-wire interface
 ```bash
 sudo raspi-config
 ```  
@@ -120,22 +120,22 @@ server {
     }
 }
 ```
-5. Once pasted type ctrl+O then enter to save the file
-6. Once saved exit by typing ctrl+x
-7. Point to Node-RED site by linking
+4. Once pasted type ctrl+O then enter to save the file
+5. Once saved exit by typing ctrl+X
+6. Point to Node-RED site by linking
 ```bash
 sudo ln -s /etc/nginx/sites-available/nodered /etc/nginx/sites-enabled/
 ```
-8. Remove default nginx site from sites enabled folder (optional but recommended)
+7. Remove default nginx site from sites enabled folder (optional but recommended)
 ```bash
 sudo rm /etc/nginx/sites-enabled/default
 ```
-9. Test and reload nginx
+8. Test and reload nginx
 ```bash
 sudo nginx -t
 sudo systemctl reload nginx
 ```
-10. Navigate to your `http://XXXXX.local` (server name you put in at step 3)
+9. Navigate to your `http://XXXXX.local` (server name you put in at step 3)
   
 Note - nginx steps assisted in creation with OpenAI ChatGPT.
 
@@ -161,7 +161,7 @@ rpi-connect signin
 5. Use the Raspberry Pi Connect website to remotely connect to your Pi  
 # Hardware
 ## Bill of Materials (BOM)
-A [bill of materials](./ReadMeAssets/DrInfraredHeaterRemoteThermostat_BOM.xlsx) has been provided and is located in ReadMeAssets folder.
+A [bill of materials](./ReadMeAssets/DrInfraredHeaterRemoteThermostat_BOM.xlsx) has been provided and is located in the ReadMeAssets folder.
 
 ## Mounting Components
 ### Mounting to the Heater
@@ -170,7 +170,7 @@ The Raspberry Pi Zero 2W, 5v power supply and relays are mounted to the heater b
 Components mounted to heater back mount plate  
 ![Components mounted on back plate](./ReadMeAssets/ComponentsMountedOnBackPlate.jpg)  
 
-Components and back mount plate mounted to backside of DR-996 heater
+Components and back mount plate mounted to the backside of the DR-996 heater
 ![Components mounted on back plate on backside of heater](./ReadMeAssets/ComponentsMountedToHeater.jpg) 
 
 
@@ -184,7 +184,7 @@ Temperature probe mounted to the wall
 ## Wiring
 To wire the heater you should reference the [DR-966 Manual](./ReadMeAssets/DR-966Manual.pdf) in the ReadMeAssets folder or find it on the Dr Infrared Heater [website](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt) for the DR-966. I have included a [wiring diagram](/ReadMeAssets/WiringDiagram.pdf) for how to wire the heater starting from the heavy gauge wires running from your circuit breaker panel to the heater. The wiring diagram also notes the wire gauges that I used. This is located in the ReadMeAssets folder.  
 
-### Wiring the temperature probe
+### Wiring the Temperature Probe
 When wiring the temperature probe into the Raspberry Pi if you have already deployed the Node-RED flows you may need to go into the "Main" tab then find the red node labeled "Temp Probe" and select the sensor ID. If no ID shows up check your temperature probe wiring. Once the sensor ID is selected deploy the flows to see the live temperature displayed on the home ui page.
 
 # Safety Disclaimer and Hazards
@@ -207,4 +207,3 @@ Finally, don't be dumb if you do not understand the dangers listed above don't d
 ### Future Features
 - Moving from node-red-dashboard to flowfuse/node-red-dashboard.
 - Celsius option for all temperature values.
-- Redesign to use solid state relays (SSRs) instead of mechanical relays.
