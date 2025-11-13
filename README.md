@@ -96,7 +96,7 @@ sudo apt install nginx -y
 ```bash
 sudo nano /etc/nginx/sites-available/nodered
 ```
-3. Add contents below and change __XXXXX__ to your own hostname
+3. Paste the contents below and change __XXXXX__ to your own hostname
 ```
 server {
     listen 80;
@@ -120,20 +120,22 @@ server {
     }
 }
 ```
-4. Point to Node-RED site by linking
+5. Once pasted type ctrl+O then enter to save the file
+6. Once saved exit by typing ctrl+x
+7. Point to Node-RED site by linking
 ```bash
 sudo ln -s /etc/nginx/sites-available/nodered /etc/nginx/sites-enabled/
 ```
-5. Remove default nginx site from sites enabled folder (optional but recommended)
+8. Remove default nginx site from sites enabled folder (optional but recommended)
 ```bash
 sudo rm /etc/nginx/sites-enabled/default
 ```
-6. Test and reload nginx
+9. Test and reload nginx
 ```bash
 sudo nginx -t
 sudo systemctl reload nginx
 ```
-7. Navigate to your `http://XXXXX.local` (server name you put in at step 3)
+10. Navigate to your `http://XXXXX.local` (server name you put in at step 3)
   
 Note - nginx steps assisted in creation with OpenAI ChatGPT.
 
@@ -166,9 +168,10 @@ A [bill of materials](./ReadMeAssets/DrInfraredHeaterRemoteThermostat_BOM.xlsx) 
 The Raspberry Pi Zero 2W, 5v power supply and relays are mounted to the heater back mount plate then that is attached to the back of the Dr Infrared heater by two short self tapping screws. This mount was 3D printed with PETG (Polyethylene Terephthalate Glycol) the [HeaterBackMountPlate.stl](./ReadMeAssets/HeaterBackMountPlate.stl) file is located in the ReadMeAssets folder.  
   
 Components mounted to heater back mount plate  
-    
-Components and back mount plate mounted to backside of DR-996 heater
+![Components mounted on back plate](./ReadMeAssets/ComponentsMountedOnBackPlate.jpg)  
 
+Components and back mount plate mounted to backside of DR-996 heater
+![Components mounted on back plate on backside of heater](./ReadMeAssets/ComponentsMountedToHeater.jpg) 
 
 
 ### Mounting the Temperature Probe
@@ -181,8 +184,11 @@ Temperature probe mounted to the wall
 ## Wiring
 To wire the heater you should reference the [DR-966 Manual](./ReadMeAssets/DR-966Manual.pdf) in the ReadMeAssets folder or find it on the Dr Infrared Heater [website](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt) for the DR-966. I have included a [wiring diagram](/ReadMeAssets/WiringDiagram.pdf) for how to wire the heater starting from the heavy gauge wires running from your circuit breaker panel to the heater. The wiring diagram also notes the wire gauges that I used. This is located in the ReadMeAssets folder.  
 
+### Wiring the temperature probe
+When wiring the temperature probe into the Raspberry Pi if you have already deployed the Node-RED flows you may need to go into the "Main" tab then find the red node labeled "Temp Probe" and select the sensor ID. If no ID shows up check your temperature probe wiring. Once the sensor ID is selected deploy the flows to see the live temperature displayed on the home ui page.
+
 # Safety Disclaimer and Hazards
-This project is great for learning about the Linux command line interface (CLI), Node-RED, and the Internet of Things (IoT). Working with AC mains electricity, heating elements, and temperature controlled systems can be dangerous and may cause electrocution, burns, fire, property damage or violations of local electrical code if done incorrectly. __Always use safe practices for this project.__ The author assumes no responsibility, liability or fault for any damage, injury or other harm from the use of this project.
+This project is great for learning about the Linux command line interface (CLI), Node-RED, 3D printing and the Internet of Things (IoT). Working with AC mains electricity, heating elements, and temperature controlled systems can be dangerous and may cause electrocution, burns, fire, property damage or violations of local electrical code if done incorrectly. __Always use safe practices for this project.__ The author assumes no responsibility, liability or fault for any damage, injury or other harm from the use of this project.
 
 ### Hazards  
 - Electrical Hazards: electrocution, electrical shock, burns and fire  
