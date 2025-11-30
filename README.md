@@ -60,12 +60,12 @@ http://<your IP or hostname>:1880
 ```  
 3. Login to the Node-RED website  
 4. Install [npm](https://www.npmjs.com/) packages from the manage pallet. Install the following:  
-[node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard) and [node-red-contrib-sensor-ds18b20](https://flows.nodered.org/node/node-red-contrib-sensor-ds18b20)  
+[flowfuse node-red-dashboard](https://flows.nodered.org/node/@flowfuse/node-red-dashboard) and [node-red-contrib-sensor-ds18b20](https://flows.nodered.org/node/node-red-contrib-sensor-ds18b20)  
 5. Import the [Flows.json](./Flows.json) file ([Node_RED importing guide](https://nodered.org/docs/user-guide/editor/workspace/import-export))  
 6. Deploy the new flows  
 7. Enter the following in to a web browser to access the user interface
 ```
-http://<your IP or hostname>:1880/ui/
+http://<your IP or hostname>:1880/dashboard/
 ```
 8. The Minimum Room Temp page is hidden by default from the navigation bar to access this page go to
 ```
