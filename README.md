@@ -120,7 +120,7 @@ server {
     }
 }
 ```
-4. Once pasted type ctrl+O then enter to save the file
+4. Once pasted and hostname added type ctrl+O then enter to save the file
 5. Once saved exit by typing ctrl+X
 6. Point to Node-RED site by linking
 ```bash
