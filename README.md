@@ -69,7 +69,7 @@ http://<your IP or hostname>:1880/ui/
 ```
 8. The Minimum Room Temp page is hidden by default from the navigation bar to access this page go to
 ```
-http://<your IP or hostname>:1880/ui/#!/2
+http://<your IP or hostname>:1880/dashboard/minroomtemp
 ```
 
 ### Flow Files
@@ -86,7 +86,7 @@ For more information on how the Node-RED flows work reference [Node-REDFlowsExpl
 
 ## nginx and Remote Access
 ### nginx Reverse Proxy (Optional)
-[nginx](https://nginx.org/) is used as a simple reverse proxy to allow a hostname such as `http://<your IP or hostname>.local` to show the Node-RED user interface (ui) dashboard website which defaults to `http://<your IP or hostname>.local:1880/ui/` and makes the user experience seamless. Below are the steps of how to setup nginx.  
+[nginx](https://nginx.org/) is used as a simple reverse proxy to allow a hostname such as `http://<your IP or hostname>.local` to show the Node-RED user interface (ui) dashboard website which defaults to `http://<your IP or hostname>.local:1880/dashboard/` and makes the user experience seamless. Below are the steps of how to setup nginx.  
 1. Install nginx
 ```bash
 sudo apt update
@@ -102,14 +102,14 @@ server {
     listen 80;
     server_name XXXXX.local;
 
-    # Redirect root to /ui
+    # Redirect root to /dashboard
     location = / {
-        return 301 /ui;
+        return 301 /dashboard;
     }
 
-    # Proxy /ui to Node-RED
-    location /ui/ {
-        proxy_pass http://127.0.0.1:1880/ui/;
+    # Proxy /dashboard to Node-RED
+    location /dashboard/ {
+        proxy_pass http://127.0.0.1:1880/dashboard/;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
