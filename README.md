@@ -205,5 +205,4 @@ This project is great for learning about the Linux command line interface (CLI),
 Finally, don't be dumb if you do not understand the dangers listed above don't do this project. I have done my best to test this system to make sure that the worst case scenario doesn't happen but cannot 100% guarantee the safety of this system.
 
 ### Future Features
-- Moving from node-red-dashboard to flowfuse/node-red-dashboard.
-- Celsius option for all temperature values.
+- Celsius option for UI.
