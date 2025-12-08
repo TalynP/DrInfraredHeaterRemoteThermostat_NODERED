@@ -407,7 +407,7 @@
         "z": "4b705cf7bd70f406",
         "name": "Temp Probe",
         "topic": "",
-        "sensorid": "28-3ce1e380a41b",
+        "sensorid": "28-3ce1e380cb0b",
         "timer": "1",
         "repeat": true,
         "x": 90,
@@ -1351,7 +1351,7 @@
             "e15406de9d8264b2"
         ],
         "x": 1135,
-        "y": 820,
+        "y": 840,
         "wires": []
     },
     {
@@ -1877,7 +1877,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 970,
-        "y": 820,
+        "y": 840,
         "wires": [
             [
                 "41bcc0f53f234775"
@@ -2027,7 +2027,7 @@
         "height": 6,
         "className": "",
         "interpolation": "linear",
-        "x": 680,
+        "x": 980,
         "y": 800,
         "wires": [
             []
@@ -2451,7 +2451,7 @@
         "className": "",
         "name": "Send Notification to UI",
         "x": 960,
-        "y": 860,
+        "y": 880,
         "wires": [
             []
         ]
@@ -2539,8 +2539,8 @@
         "wires": [
             [
                 "e2cc0f0b575f46bb",
-                "de2fde17057ca731",
-                "5d3d788096cc05bb"
+                "5d3d788096cc05bb",
+                "e31730f5253e10ab"
             ]
         ]
     },
@@ -2567,6 +2567,26 @@
             ],
             [
                 "e29fa8c4e0445c08"
+            ]
+        ]
+    },
+    {
+        "id": "e31730f5253e10ab",
+        "type": "function",
+        "z": "4b705cf7bd70f406",
+        "name": "Limit and Avg Temp Data Points",
+        "func": "let count = context.get(\"count\") || 0;\nlet values = context.get(\"values\") || [];\n\ncount++;\nvalues.push(msg.payload);\n\nif (count == 60){\n    let sum = values.reduce((a, b) => a + b, 0);\n    let avg = sum / values.length;\n    avg = Math.round(avg * 10) / 10 //Makes avg one decimal place\n\n    context.set(\"count\", 0);\n    context.set(\"values\", []);\n    msg.payload = avg;\n    return msg;\n}\nelse{\n    context.set(\"count\", count);\n    context.set(\"values\", values);\n}\n\n//return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 800,
+        "wires": [
+            [
+                "de2fde17057ca731"
             ]
         ]
     },
@@ -3675,5 +3695,15 @@
         "x": 540,
         "y": 420,
         "wires": []
+    },
+    {
+        "id": "a2c22ff730f197ed",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.29.0",
+            "node-red-node-pi-gpio": "2.0.6",
+            "node-red-contrib-sensor-ds18b20": "0.2.0"
+        }
     }
 ]
