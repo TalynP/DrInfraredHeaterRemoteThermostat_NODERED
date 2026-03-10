@@ -205,4 +205,7 @@ This project is great for learning about the Linux command line interface (CLI),
 Finally, don't be dumb if you do not understand the dangers listed above don't do this project. I have done my best to test this system to make sure that the worst case scenario doesn't happen but cannot 100% guarantee the safety of this system.
 
 ### Future Features
+- Bash script for install.
 - Celsius option for UI.
+- Custom PCB hardware documentation (KiCad).
+- Room heat up time prediction using excel data analysis documentation.
