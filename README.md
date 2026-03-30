@@ -67,9 +67,9 @@ http://<your IP or hostname>:1880
 ```
 http://<your IP or hostname>:1880/dashboard/
 ```
-8. The Minimum Room Temp page is hidden by default from the navigation bar to access this page go to
+1. The Advanced page is hidden by default from the navigation bar to access this page go to
 ```
-http://<your IP or hostname>:1880/dashboard/minroomtemp
+http://<your IP or hostname>:1880/dashboard/advanced
 ```
 
 ### Flow Files
@@ -203,6 +203,8 @@ This project is great for learning about the Linux command line interface (CLI),
 
 # Authors Note and Future Features
 Finally, don't be dumb if you do not understand the dangers listed above don't do this project. I have done my best to test this system to make sure that the worst case scenario doesn't happen but cannot 100% guarantee the safety of this system.
+
+If you would like a operating manual reach out to me via my contact information in my profile.
 
 ### Future Features
 - Bash script for install.
