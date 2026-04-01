@@ -2,16 +2,29 @@
 
 Controls a Dr Infrared Heater ([DR-996](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt)) over a local Wi-Fi network.
 
-This project uses a [Raspberry Pi Zero 2W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) with Raspbian GNU/Linux 12 (bookworm) with [Node-RED](https://nodered.org/) to build the logic of the thermostat.  
-Along with this a relay is used to control the heater to turn it on or off depending on the room temperature.  
+This project uses a [Raspberry Pi Software Zero 2W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) with Raspbian GNU/Linux 12 (bookworm) with [Node-RED](https://nodered.org/) to build the logic of the thermostat.  
   
 ## User Pages  
 ![Common User Pages](./ReadMeAssets/UserPages.png)
 
+## Navigation
+1. [Software](#software-setup)
+   - a. [Raspberry Pi Software Install](#raspberry-pi)
+   - b. [Node-Red Install](#node-red)
+   - c. [nginx and Remote Access](#nginx-and-remote-access)
+   - d. [Updating](#updating-to-new-version)
+2. [Hardware](#hardware)
+    - a. [BOM](#bill-of-materials-bom)
+    - b. [Mounting Components](#mounting-components)
+    - c. [Wiring](#wiring)
+3. [Authors Note and Future Features](#authors-note-and-future-features)
+    - a. [Future Features](#future-features)
+<br>
+
 # Software Setup
-## Raspberry Pi
-Install the Raspberry Pi OS on to a micro SD card using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) software.
-1. SSH into your Raspberry Pi
+## Raspberry Pi Software
+Install the Raspberry Pi Software OS on to a micro SD card using the [Raspberry Pi Software Imager](https://www.raspberrypi.com/software/) software.
+1. SSH into your Raspberry Pi Software
 2. Update and Upgrade OS
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -20,7 +33,7 @@ sudo apt update && sudo apt upgrade -y
 ```bash
 bash <(curl -sL https://github.com/node-red/linux-installers/releases/latest/download/update-nodejs-and-nodered-deb)
 ```  
-4. When it asks "Would you like to install the Pi-specific nodes?" select yes
+4. When it asks "Would you like to install the Pi Software-specific nodes?" select yes
 5. Enable Node-RED service to run on boot  
 ```bash
 sudo systemctl enable nodered.service
@@ -39,7 +52,7 @@ sudo raspi-config
 
 ## Node-RED
 ### RPi.GPIO Library Install
-Depending on your Raspberry Pi OS version you may need to install/update the [RPi.GPIO](https://pypi.org/project/RPi.GPIO/) library. Command to install:
+Depending on your Raspberry Pi Software OS version you may need to install/update the [RPi.GPIO](https://pypi.org/project/RPi.GPIO/) library. Command to install:
 ```bash
 sudo apt install python3-rpi.gpio
 ```
@@ -139,10 +152,10 @@ sudo systemctl reload nginx
   
 Note - nginx steps assisted in creation with OpenAI ChatGPT.
 
-### Remote Access to the Raspberry Pi (Optional)
-A native feature for Raspberry Pi's is their [Raspberry Pi Connect](https://www.raspberrypi.com/software/connect/) software that allows secure remote access to your Raspberry Pi. Below I have steps to get this working using a headless (no desktop) Raspberry Pi but is best to reference the official Raspberry Pi Connect [documentation](https://www.raspberrypi.com/documentation/services/connect.html).  
+### Remote Access to the Raspberry Pi Software (Optional)
+A native feature for Raspberry Pi Software's is their [Raspberry Pi Software Connect](https://www.raspberrypi.com/software/connect/) software that allows secure remote access to your Raspberry Pi Software. Below I have steps to get this working using a headless (no desktop) Raspberry Pi Software but is best to reference the official Raspberry Pi Software Connect [documentation](https://www.raspberrypi.com/documentation/services/connect.html).  
 
-1. Install Raspberry Pi Connect
+1. Install Raspberry Pi Software Connect
 ```bash
 sudo apt install rpi-connect-lite
 ```
@@ -154,18 +167,22 @@ rpi-connect on
 ```bash
 loginctl enable-linger
 ```
-4. Generate hyperlink to login to Raspberry Pi Connect and add your Pi
+4. Generate hyperlink to login to Raspberry Pi Software Connect and add your Pi Software
 ```bash
 rpi-connect signin
 ```
-5. Use the Raspberry Pi Connect website to remotely connect to your Pi  
+5. Use the Raspberry Pi Software Connect website to remotely connect to your Pi Software
+
+## Updating to New Version
+
+
 # Hardware
 ## Bill of Materials (BOM)
 A [bill of materials](./ReadMeAssets/DrInfraredHeaterRemoteThermostat_BOM.xlsx) has been provided and is located in the ReadMeAssets folder.
 
 ## Mounting Components
 ### Mounting to the Heater
-The Raspberry Pi Zero 2W, 5v power supply and relays are mounted to the heater back mount plate then that is attached to the back of the Dr Infrared heater by two short self tapping screws. This mount was 3D printed with PETG (Polyethylene Terephthalate Glycol) the [HeaterBackMountPlate.stl](./ReadMeAssets/HeaterBackMountPlate.stl) file is located in the ReadMeAssets folder.  
+The Raspberry Pi Software Zero 2W, 5v power supply and relays are mounted to the heater back mount plate then that is attached to the back of the Dr Infrared heater by two short self tapping screws. This mount was 3D printed with PETG (Polyethylene Terephthalate Glycol) the [HeaterBackMountPlate.stl](./ReadMeAssets/HeaterBackMountPlate.stl) file is located in the ReadMeAssets folder.  
   
 Components mounted to heater back mount plate  
 ![Components mounted on back plate](./ReadMeAssets/ComponentsMountedOnBackPlate.jpg)  
@@ -185,7 +202,7 @@ Temperature probe mounted to the wall
 To wire the heater you should reference the [DR-966 Manual](./ReadMeAssets/DR-966Manual.pdf) in the ReadMeAssets folder or find it on the Dr Infrared Heater [website](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt) for the DR-966. I have included a [wiring diagram](/ReadMeAssets/WiringDiagram.pdf) for how to wire the heater starting from the heavy gauge wires running from your circuit breaker panel to the heater. The wiring diagram also notes the wire gauges that I used. This is located in the ReadMeAssets folder.  
 
 ### Wiring the Temperature Probe
-When wiring the temperature probe into the Raspberry Pi if you have already deployed the Node-RED flows you may need to go into the "Main" tab then find the red node labeled "Temp Probe" and select the sensor ID. If no ID shows up check your temperature probe wiring. Once the sensor ID is selected deploy the flows to see the live temperature displayed on the home ui page.
+When wiring the temperature probe into the Raspberry Pi Software if you have already deployed the Node-RED flows you may need to go into the "Main" tab then find the red node labeled "Temp Probe" and select the sensor ID. If no ID shows up check your temperature probe wiring. Once the sensor ID is selected deploy the flows to see the live temperature displayed on the home ui page.
 
 # Safety Disclaimer and Hazards
 This project is great for learning about the Linux command line interface (CLI), Node-RED, 3D printing and the Internet of Things (IoT). Working with AC mains electricity, heating elements, and temperature controlled systems can be dangerous and may cause electrocution, burns, fire, property damage or violations of local electrical code if done incorrectly. __Always use safe practices for this project.__ The author assumes no responsibility, liability or fault for any damage, injury or other harm from the use of this project.
@@ -206,7 +223,7 @@ Finally, don't be dumb if you do not understand the dangers listed above don't d
 
 If you would like a operating manual reach out to me via my contact information in my profile.
 
-### Future Features
+## Future Features
 - Bash script for install.
 - Celsius option for UI.
 - Custom PCB hardware documentation (KiCad).
