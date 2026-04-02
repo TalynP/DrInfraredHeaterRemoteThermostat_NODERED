@@ -8,18 +8,18 @@ This project uses a [Raspberry Pi Software Zero 2W](https://www.raspberrypi.com/
 ![Common User Pages](./ReadMeAssets/UserPages.png)
 
 ## Navigation
-1. [Software](#software-setup)
+1. [Software Setup](#software-setup)
    - a. [Raspberry Pi Software Install](#raspberry-pi)
    - b. [Node-Red Install](#node-red)
    - c. [nginx and Remote Access](#nginx-and-remote-access)
    - d. [Updating](#updating-to-new-version)
 2. [Hardware](#hardware)
-    - a. [BOM](#bill-of-materials-bom)
-    - b. [Mounting Components](#mounting-components)
-    - c. [Wiring](#wiring)
+   - a. [BOM](#bill-of-materials-bom)
+   - b. [Mounting Components](#mounting-components)
+   - c. [Wiring](#wiring)
+   - d. [heater Control Panel Setup](#heater-control-panel-setup)
 3. [Authors Note and Future Features](#authors-note-and-future-features)
     - a. [Future Features](#future-features)
-<br>
 
 # Software Setup
 ## Raspberry Pi Software
@@ -173,7 +173,7 @@ rpi-connect signin
 ```
 5. Use the Raspberry Pi Software Connect website to remotely connect to your Pi Software
 
-## Updating to New Version
+## Updating to a Newer Version
 
 
 # Hardware
@@ -196,13 +196,18 @@ The DS18B20 temperature probe should be at ran as far as possible from the heate
 
 Temperature probe mounted to the wall  
 
-![Common User Pages](./ReadMeAssets/TemperatureProbeCase.jpg)
+![TemperatureProbeCase](./ReadMeAssets/TemperatureProbeCase.jpg)
 
 ## Wiring
 To wire the heater you should reference the [DR-966 Manual](./ReadMeAssets/DR-966Manual.pdf) in the ReadMeAssets folder or find it on the Dr Infrared Heater [website](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt) for the DR-966. I have included a [wiring diagram](/ReadMeAssets/WiringDiagram.pdf) for how to wire the heater starting from the heavy gauge wires running from your circuit breaker panel to the heater. The wiring diagram also notes the wire gauges that I used. This is located in the ReadMeAssets folder.  
 
 ### Wiring the Temperature Probe
 When wiring the temperature probe into the Raspberry Pi Software if you have already deployed the Node-RED flows you may need to go into the "Main" tab then find the red node labeled "Temp Probe" and select the sensor ID. If no ID shows up check your temperature probe wiring. Once the sensor ID is selected deploy the flows to see the live temperature displayed on the home ui page.
+
+## Heater Control Panel Setup
+The Dr Infrared Heater ([DR-996](https://drheaterusa.com/products/dr966-240-volt-hardwired-shop-garage-commercial-heater-3000-watt-6000-watt)) front control panel has a wattage power switch (red switch) and the temperature setting knob (black knob). For the fastest heating possible set the wattage power switch on the heater to the High/6KW position. Then set the temperature setting knob all the way to the high position. See the image below for how the heater’s front control panel should appear.
+
+![DrInfraredHeaterPhysicalControls](./ReadMeAssets/DrInfraredHeaterPhysicalControls.jpg)
 
 # Safety Disclaimer and Hazards
 This project is great for learning about the Linux command line interface (CLI), Node-RED, 3D printing and the Internet of Things (IoT). Working with AC mains electricity, heating elements, and temperature controlled systems can be dangerous and may cause electrocution, burns, fire, property damage or violations of local electrical code if done incorrectly. __Always use safe practices for this project.__ The author assumes no responsibility, liability or fault for any damage, injury or other harm from the use of this project.
