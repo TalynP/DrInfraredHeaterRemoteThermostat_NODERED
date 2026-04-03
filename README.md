@@ -12,12 +12,12 @@ This project uses a [Raspberry Pi Software Zero 2W](https://www.raspberrypi.com/
    - a. [Raspberry Pi Software Install](#raspberry-pi)
    - b. [Node-Red Install](#node-red)
    - c. [nginx and Remote Access](#nginx-and-remote-access)
-   - d. [Updating](#updating-to-new-version)
+   - d. [Updating](#applying-updates)
 2. [Hardware](#hardware)
    - a. [BOM](#bill-of-materials-bom)
    - b. [Mounting Components](#mounting-components)
    - c. [Wiring](#wiring)
-   - d. [heater Control Panel Setup](#heater-control-panel-setup)
+   - d. [Heater Control Panel Setup](#heater-control-panel-setup)
 3. [Authors Note and Future Features](#authors-note-and-future-features)
     - a. [Future Features](#future-features)
 
@@ -173,8 +173,20 @@ rpi-connect signin
 ```
 5. Use the Raspberry Pi Software Connect website to remotely connect to your Pi Software
 
-## Updating to a Newer Version
+## Applying Updates
+<details>
+<summary>Click to Drop Down</summary>
 
+1. Acquire the latest version released of [Flows.json](./Flows.json).
+2. Open your Node-Red editor.
+3. Delete every existing flow (tab workspace).
+4. Find the three bars in the top right and select [import](https://nodered.org/docs/user-guide/editor/workspace/import-export).
+5. Select "select a file to import" and import the Flows.json file.
+6. Select import to "current flow".
+7. Select red "Import" button in the bottom right.
+8. If a window appears stating "Some of the nodes you are importing already exist in your workspace." select "View nodes...".
+9. Under the "Configuration nodes" section select every nodes checkbox and its replace checkbox to replace all current configuration node with the new updated version.
+</details>
 
 # Hardware
 ## Bill of Materials (BOM)
