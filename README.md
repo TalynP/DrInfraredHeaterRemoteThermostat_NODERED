@@ -175,7 +175,7 @@ rpi-connect signin
 
 ## Applying Updates
 <details>
-<summary>Click to Drop Down</summary>
+<summary>Click to Expand</summary>
 
 1. Acquire the latest version released of [Flows.json](./Flows.json).
 2. Open your Node-Red editor.
@@ -183,10 +183,11 @@ rpi-connect signin
 4. Find the three bars in the top right and select [import](https://nodered.org/docs/user-guide/editor/workspace/import-export).
 5. Select "select a file to import" and import the Flows.json file.
 6. Select import to "current flow".
-7. Select red "Import" button in the bottom right.
+7. Select the red "Import" button in the bottom right.
 8. If a window appears stating "Some of the nodes you are importing already exist in your workspace." select "View nodes...".
 9. Under the "Configuration nodes" section select every nodes checkbox and its replace checkbox to replace all current configuration node with the new updated version.
 </details>
+<br>
 
 # Hardware
 ## Bill of Materials (BOM)
