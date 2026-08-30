@@ -18,7 +18,7 @@ This project uses a [Raspberry Pi Software Zero 2W](https://www.raspberrypi.com/
    - b. [Mounting Components](#mounting-components)
    - c. [Wiring](#wiring)
    - d. [Heater Control Panel Setup](#heater-control-panel-setup)
-   - e. []()
+   - e. [Printed Circuit Board Design (PCB)](#printed-circuit-board-design-pcb)
 3. [Authors Note and Future Features](#authors-note-and-future-features)
     - a. [Future Features](#future-features)
 
