@@ -18,6 +18,7 @@ This project uses a [Raspberry Pi Software Zero 2W](https://www.raspberrypi.com/
    - b. [Mounting Components](#mounting-components)
    - c. [Wiring](#wiring)
    - d. [Heater Control Panel Setup](#heater-control-panel-setup)
+   - e. []()
 3. [Authors Note and Future Features](#authors-note-and-future-features)
     - a. [Future Features](#future-features)
 
@@ -222,6 +223,9 @@ The Dr Infrared Heater ([DR-996](https://drheaterusa.com/products/dr966-240-volt
 
 ![DrInfraredHeaterPhysicalControls](./ReadMeAssets/DrInfraredHeaterPhysicalControls.jpg)
 
+## Printed Circuit Board Design (PCB)
+A custom PCB has been developed for this project reference [PCB Design Documentation](./PCB%20Design/PCBDESIGN.md) on the design and how to be able to get your own. __(08/30/2026 documentation in progress...)__
+
 # Safety Disclaimer and Hazards
 This project is great for learning about the Linux command line interface (CLI), Node-RED, 3D printing and the Internet of Things (IoT). Working with AC mains electricity, heating elements, and temperature controlled systems can be dangerous and may cause electrocution, burns, fire, property damage or violations of local electrical code if done incorrectly. __Always use safe practices for this project.__ The author assumes no responsibility, liability or fault for any damage, injury or other harm from the use of this project.
 
@@ -244,5 +248,4 @@ If you would like a operating manual reach out to me via my contact information 
 ## Future Features
 - Bash script for install.
 - Celsius option for UI.
-- Custom PCB hardware documentation (KiCad).
 - Room heat up time prediction using excel data analysis documentation.
