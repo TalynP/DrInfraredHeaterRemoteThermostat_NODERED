@@ -18,7 +18,7 @@ This project uses a [Raspberry Pi Software Zero 2W](https://www.raspberrypi.com/
    - b. [Mounting Components](#mounting-components)
    - c. [Wiring](#wiring)
    - d. [Heater Control Panel Setup](#heater-control-panel-setup)
-   - e. [Printed Circuit Board Design (PCB)](#printed-circuit-board-design-pcb)
+   - e. [Printed Circuit Board (PCB) Design](#printed-circuit-board-pcb-design)
 3. [Authors Note and Future Features](#authors-note-and-future-features)
     - a. [Future Features](#future-features)
 
@@ -223,7 +223,7 @@ The Dr Infrared Heater ([DR-996](https://drheaterusa.com/products/dr966-240-volt
 
 ![DrInfraredHeaterPhysicalControls](./ReadMeAssets/DrInfraredHeaterPhysicalControls.jpg)
 
-## Printed Circuit Board Design (PCB)
+## Printed Circuit Board (PCB) Design
 A custom PCB has been developed for this project reference [PCB Design Documentation](./PCB%20Design/PCBDESIGN.md) on the design and how to be able to get your own. __(08/30/2026 documentation in progress...)__
 
 # Safety Disclaimer and Hazards
